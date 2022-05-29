@@ -1,7 +1,8 @@
 package CLDI_Extractor
 
 type CLDIExtractor struct {
-	atfParser *ATFParser
+	atfParser     *ATFParser
+	atfNormalizer *ATFNormalizer
 }
 
 func newCLDIExtractor() *CLDIExtractor {

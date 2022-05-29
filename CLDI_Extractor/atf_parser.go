@@ -18,10 +18,11 @@ type CLDIData struct {
 }
 
 type ATFParser struct {
-	path     string
-	destPath string
-	data     []string
-	CLDIList []CLDIData
+	path         string
+	destPath     string
+	data         []string
+	CLDIList     []CLDIData
+	currCLDIData CLDIData
 }
 
 func newATFParser(path string, destPath string) *ATFParser {
@@ -53,31 +54,31 @@ func (p *ATFParser) loadCLDIData() {
 */
 
 func (p *ATFParser) parseLines() {
-	cldiData := &CLDIData{}
 	for _, line := range p.data {
-		p.CLDIList = append(p.CLDIList, *cldiData)
 		line = strings.TrimSpace(line)
 		if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
+			p.currCLDIData = CLDIData{}
 			line = strings.ReplaceAll(line, "&", "")
 			line = strings.TrimSpace(line)
 			data := strings.SplitN(line, " = ", 2)
-			cldiData.CLDI = data[0]
-			cldiData.PUB = data[1]
+			p.currCLDIData.CLDI = data[0]
+			p.currCLDIData.PUB = data[1]
 		} else if strings.Contains(line, "#tr.en") {
 			// You can translate tr.en entries
 			line = strings.Replace(line, "#tr.en", "", 1)
 			line = strings.Replace(line, ":", "", 1)
-			cldiData.annotations = line
+			p.currCLDIData.annotations = line
 		} else if strings.Contains(line, ". ") {
 			_, err := strconv.Atoi(line[0:1])
 			if err != nil {
 				continue
 			}
 			data := strings.SplitN(line, ". ", 2)
-			cldiData.lines = make(map[string]string)
-			cldiData.lines["no"] = strings.TrimSpace(data[0])
-			cldiData.lines["translit"] = strings.TrimSpace(data[1])
-			cldiData.lines["normalized_translit"] = strings.TrimSpace(data[1])
+			p.currCLDIData.lines = make(map[string]string)
+			p.currCLDIData.lines["no"] = strings.TrimSpace(data[0])
+			p.currCLDIData.lines["translit"] = strings.TrimSpace(data[1])
+			p.currCLDIData.lines["normalized_translit"] = strings.TrimSpace(data[1])
+			p.CLDIList = append(p.CLDIList, p.currCLDIData)
 		} else {
 			continue
 		}
