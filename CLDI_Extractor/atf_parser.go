@@ -2,36 +2,71 @@ package CLDI_Extractor
 
 import (
 	"bufio"
-	"encoding/csv"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
 	"strings"
 )
 
-//Lines map to a line_no, transliterations and normalizations
+/*
+tabletLines:
+
+Each line_no maps to a transliteration and entity
+
+
+*/
+
+//Lines map to a line_no, transliterations, normalizations and annotations
 type CLDIData struct {
 	CLDI        string
 	PUB         string
-	annotations string
-	lines       map[string]string
+	tabletLines map[string]string
+	// mu          sync.Mutex
 }
 
 type ATFParser struct {
 	path         string
-	destPath     string
 	data         []string
 	CLDIList     []CLDIData
 	currCLDIData CLDIData
+	out          chan CLDIData
+	done         chan struct{}
+	t            int
 }
 
 func newATFParser(path string, destPath string) *ATFParser {
-	return &ATFParser{path: path, destPath: destPath}
+	atfParser := &ATFParser{
+		path: path,
+		out:  make(chan CLDIData, 1000),
+		done: make(chan struct{}, 1),
+	}
+	atfParser.loadCLDIData()
+	atfParser.run()
+	return atfParser
+}
+
+func (p *ATFParser) run() {
+	go func() {
+		for _, line := range p.data {
+			p.parseLines(line)
+		}
+		close(p.out)
+	}()
+
+	go func() {
+		p.done <- struct{}{}
+	}()
+}
+
+func (p *ATFParser) WaitUntilDone() {
+	p.done <- struct{}{}
 }
 
 func (p *ATFParser) loadCLDIData() {
 	f, err := os.Open(p.path)
 	if err != nil {
+		println("issue")
 		log.Fatalf("failed reading file: %s", err)
 	}
 	defer f.Close()
@@ -45,57 +80,51 @@ func (p *ATFParser) loadCLDIData() {
 }
 
 /*
-4 cases
-
-1 - Skip empty lines
-2 - Tablet information denotated by "&P"
-3 - Tablet annotations/translation denotated by "#tr.en"
-4 - Tablet line and writings ex: "1 _mu_ qa-ba-ra-a{ki}"
+Parse Tablet Line-By-Line.
+	- &P indicates a new tablet, we initalize p.currCLDIData for a new tablet
+	- Store CLDI, PUB, annotation and transliterations data to this object
 */
 
-func (p *ATFParser) parseLines() {
-	for _, line := range p.data {
-		line = strings.TrimSpace(line)
-		if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
-			p.currCLDIData = CLDIData{}
+func (p *ATFParser) parseLines(line string) {
+	line = strings.TrimSpace(line)
+	if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
+		if p.currCLDIData.PUB == "" {
 			line = strings.ReplaceAll(line, "&", "")
 			line = strings.TrimSpace(line)
 			data := strings.SplitN(line, " = ", 2)
 			p.currCLDIData.CLDI = data[0]
 			p.currCLDIData.PUB = data[1]
-		} else if strings.Contains(line, "#tr.en") {
-			// You can translate tr.en entries
-			line = strings.Replace(line, "#tr.en", "", 1)
-			line = strings.Replace(line, ":", "", 1)
-			p.currCLDIData.annotations = line
-		} else if strings.Contains(line, ". ") {
-			_, err := strconv.Atoi(line[0:1])
-			if err != nil {
-				continue
-			}
-			data := strings.SplitN(line, ". ", 2)
-			p.currCLDIData.lines = make(map[string]string)
-			p.currCLDIData.lines["no"] = strings.TrimSpace(data[0])
-			p.currCLDIData.lines["translit"] = strings.TrimSpace(data[1])
-			p.currCLDIData.lines["normalized_translit"] = strings.TrimSpace(data[1])
-			p.CLDIList = append(p.CLDIList, p.currCLDIData)
+
 		} else {
-			continue
+			p.out <- p.currCLDIData
+			p.currCLDIData = CLDIData{}
+			p.t++
 		}
+		line = strings.ReplaceAll(line, "&", "")
+		line = strings.TrimSpace(line)
+		data := strings.SplitN(line, " = ", 2)
+		p.currCLDIData.CLDI = data[0]
+		p.currCLDIData.PUB = data[1]
+		p.currCLDIData.tabletLines = make(map[string]string)
 
-	}
-}
+	} else if line != "" && strings.Contains(string(line[0:1]), "@") && !strings.Contains(line, "object") && !strings.Contains(line, "tablet") && !strings.Contains(line, "envelope") && !strings.Contains(line, "bulla") {
+		p.currCLDIData.tabletLines["loc"] = strings.TrimSpace(line)
+	} else if strings.Contains(line, "#tr.en") {
+		// You can translate tr.en entries
+		line = strings.Replace(line, "#tr.en", "", 1)
+		line = strings.Replace(line, ":", "", 1)
+		p.currCLDIData.tabletLines["annotations"] = strings.TrimSpace(line)
 
-func (p *ATFParser) exportToCSV() {
-	csvFile, err := os.Create(p.destPath)
-	if err != nil {
-		log.Fatalf("failed creating file: %s", err)
+	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") {
+		_, err := strconv.Atoi(line[0:1])
+		if err != nil {
+			println(line)
+			fmt.Printf("err: %v\n", err)
+			println("error")
+		}
+		data := strings.SplitN(line, ". ", 2)
+
+		p.currCLDIData.tabletLines["no"] = strings.TrimSpace(data[0])
+		p.currCLDIData.tabletLines["translit"] = strings.TrimSpace(data[1])
 	}
-	csvWriter := csv.NewWriter(csvFile)
-	csvWriter.Comma = '\t'
-	csvWriter.Write([]string{"CLDI", "PUB", "no", "translit", "annotations"}) //hardcoded
-	for _, CLDIData := range p.CLDIList {
-		csvWriter.Write([]string{CLDIData.CLDI, CLDIData.PUB, CLDIData.lines["no"], CLDIData.lines["translit"], CLDIData.annotations})
-	}
-	csvFile.Close()
 }

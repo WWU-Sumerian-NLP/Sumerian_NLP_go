@@ -13,8 +13,6 @@ type ATFParserTestSuite struct {
 func (suite *ATFParserTestSuite) TestATFParser() {
 	parser := newATFParser("../../sumerian_tablets/cdli_atf_20220525.txt", "../../cdli_atf_20220525.tsv")
 	parser.loadCLDIData()
-	parser.parseLines()
-	parser.exportToCSV()
 
 }
 
