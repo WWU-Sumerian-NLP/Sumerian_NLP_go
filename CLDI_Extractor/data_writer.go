@@ -50,13 +50,20 @@ func (w *DataWriter) makeWriter() {
 	csvWriter.Comma = '\t'
 	w.csvWriter = csvWriter
 	w.csvWriter.Write([]string{"CLDI", "PUB", "loc", "no", "raw_translit",
-		"normalized_translit", "annotations", "transli_entities", "entities"}) //hardcoded
+		"normalized_translit", "transli_entities", "entities"}) //hardcoded
 	w.csvWriter.Flush()
 }
 
 func (w *DataWriter) exportToCSV(cldiData CLDIData) {
-	w.csvWriter.Write([]string{cldiData.CLDI, cldiData.PUB, cldiData.tabletLines["loc"], cldiData.tabletLines["no"],
-		cldiData.tabletLines["translit"], cldiData.tabletLines["normalized_translit"],
-		cldiData.tabletLines["annotations"], cldiData.tabletLines["transli_entities"], cldiData.tabletLines["entities"]})
+	cldiNo := cldiData.CLDI
+	cldiPub := cldiData.PUB
+	for _, tablet := range cldiData.TabletList {
+		for lineNo, translit := range tablet.TabletLines {
+			w.csvWriter.Write([]string{cldiNo, cldiPub, tablet.TabletLocation, lineNo,
+				translit, tablet.NormalizedLines[lineNo], tablet.EntitiyLines[lineNo]})
+		}
+		w.csvWriter.Flush()
+	}
 	w.csvWriter.Flush()
+
 }

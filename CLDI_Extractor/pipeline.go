@@ -17,5 +17,5 @@ func runPipeline(path, destPath string) {
 		atfParser.WaitUntilDone()
 
 	}()
-	time.Sleep(time.Second * 6)
+	time.Sleep(time.Second * 20)
 }

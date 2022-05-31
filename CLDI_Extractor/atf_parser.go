@@ -11,31 +11,19 @@ import (
 
 //Lines map to a line_no, transliterations, normalizations and annotations
 type CLDIData struct {
-	CLDI string
-	PUB  string
-	// TabletList  []TabletLine
-	tabletLines map[string]string
+	CLDI       string
+	PUB        string
+	TabletList []TabletLine
 	// mu          sync.Mutex
 }
 
-// type TabletLine struct {
-// 	TabletLocation string
-// 	tabletLines    map[string]string //map line_no to transliterations
-// 	annotation     map[string]string //map line_no to annotation
-// }
-
-/*
-for i, tabletLine := range cldiData.TabletList {
-	if entry := cldiData.annotations[i]{
-		writeToCSV(location, tabletLine[i], entry)
-	} else {
-		writeToCSV(location, tabletLine[i], "")
-	}
+type TabletLine struct {
+	TabletLocation  string
+	TabletLines     map[string]string //map line_no to transliterations
+	NormalizedLines map[string]string
+	EntitiyLines    map[string]string
+	Annotation      map[string]string //map line_no to annotation
 }
-
-
-
-*/
 
 type ATFParser struct {
 	path         string
@@ -112,18 +100,19 @@ func (p *ATFParser) parseLines(line string) {
 			p.out <- p.currCLDIData
 			p.currCLDIData = CLDIData{}
 			p.t++
+
 		}
 		line = strings.ReplaceAll(line, "&", "")
 		line = strings.TrimSpace(line)
 		data := strings.SplitN(line, " = ", 2)
 		p.currCLDIData.CLDI = data[0]
 		p.currCLDIData.PUB = data[1]
-		p.currCLDIData.tabletLines = make(map[string]string)
 
 	} else if line != "" && strings.Contains(string(line[0:1]), "@") && !strings.Contains(line, "object") && !strings.Contains(line, "tablet") && !strings.Contains(line, "envelope") && !strings.Contains(line, "bulla") {
-		p.currCLDIData.TabletList = make([]TabletLine, 5)
-		// tabletLine := &TabletLine{}
-		// tabletLine.TabletLocation = strings.TrimSpace(line)
+		newTableLine := TabletLine{}
+		newTableLine.TabletLocation = strings.TrimSpace(line)
+		newTableLine.TabletLines = make(map[string]string)
+		p.currCLDIData.TabletList = append(p.currCLDIData.TabletList, newTableLine)
 
 	} else if strings.Contains(line, "#tr.en") {
 		// You can translate tr.en entries
@@ -131,7 +120,7 @@ func (p *ATFParser) parseLines(line string) {
 		line = strings.Replace(line, ":", "", 1)
 
 		// TabletLine.
-		p.currCLDIData.tabletLines["annotations"] = strings.TrimSpace(line)
+		// p.currCLDIData.tabletLines["annotations"] = strings.TrimSpace(line)
 
 	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") {
 		_, err := strconv.Atoi(line[0:1])
@@ -140,7 +129,10 @@ func (p *ATFParser) parseLines(line string) {
 		}
 		data := strings.SplitN(line, ". ", 2)
 
-		p.currCLDIData.tabletLines["no"] = strings.TrimSpace(data[0])
-		p.currCLDIData.tabletLines["translit"] = strings.TrimSpace(data[1])
+		line_no := strings.TrimSpace(data[0])
+		translit := strings.TrimSpace(data[1])
+		if len(p.currCLDIData.TabletList) > 0 {
+			p.currCLDIData.TabletList[len(p.currCLDIData.TabletList)-1].TabletLines[line_no] = translit
+		}
 	}
 }

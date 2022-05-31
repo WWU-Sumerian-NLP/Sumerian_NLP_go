@@ -11,7 +11,7 @@ type PipelineTestSuite struct {
 }
 
 func (suite *PipelineTestSuite) TestPipeline() {
-	runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "pipeline.tsv")
+	runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "new_pipeline.tsv")
 
 }
 
