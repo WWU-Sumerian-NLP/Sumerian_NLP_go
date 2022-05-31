@@ -14,7 +14,6 @@ type CLDIData struct {
 	CLDI       string
 	PUB        string
 	TabletList []TabletLine
-	// mu          sync.Mutex
 }
 
 type TabletLine struct {
@@ -22,13 +21,12 @@ type TabletLine struct {
 	TabletLines     map[string]string //map line_no to transliterations
 	NormalizedLines map[string]string
 	EntitiyLines    map[string]string
-	Annotation      map[string]string //map line_no to annotation
+	// Annotation      map[string]string //map line_no to annotation
 }
 
 type ATFParser struct {
 	path         string
 	data         []string
-	CLDIList     []CLDIData
 	currCLDIData CLDIData
 	out          chan CLDIData
 	done         chan struct{}
