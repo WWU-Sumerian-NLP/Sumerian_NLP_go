@@ -1,21 +1,34 @@
 package CLDI_Extractor
 
 import (
+	"fmt"
+	"testing"
+
 	"github.com/stretchr/testify/suite"
 )
-
-// /Users/hanselguzman-soto/Desktop/urr3-drehem-KG/Sumerian_KG/Data_Collection/sumerian_tablets/cdli_atf_20220525.txt
 
 type CLDIEntityExtractorTest struct {
 	suite.Suite
 }
 
-// func (suite *CLDIEntityExtractorTest) TestEntityExtraction() {
-// 	entityExtractor := newCLDIEntityExtractor("../../cdli_atf_20220525.csv", "../../entity_test.tsv")
-// 	entityExtractor.getFromAnnotations()
+func (suite *CLDIEntityExtractorTest) TestEntityExtraction() {
+	parsedLines := make(chan CLDIData, 10)
+	entitiesParsed := make(chan CLDIData, 10)
+	parser := &ATFParser{path: "test_data/entity_extraction_input.atf", out: parsedLines, done: make(chan struct{}, 1)}
+	parser.run()
+	parser.WaitUntilDone()
+	entityExtractor := &CLDIEntityExtractor{in: parsedLines, out: entitiesParsed, done: make(chan struct{}, 1)}
+	entityExtractor.run()
+	entityExtractor.WaitUntilDone()
 
-// }
+	// close(outputChan)
 
-// func TestEntityExtractionTestSuite(t *testing.T) {
-// 	suite.Run(t, new(CLDIEntityExtractorTest))
-// }
+	for test := range entitiesParsed {
+		fmt.Printf("test: %v\n", test)
+	}
+
+}
+
+func TestEntityExtractionTestSuite(t *testing.T) {
+	suite.Run(t, new(CLDIEntityExtractorTest))
+}

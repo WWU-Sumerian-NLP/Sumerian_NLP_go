@@ -57,7 +57,6 @@ func (w *DataWriter) makeWriter() {
 func (w *DataWriter) exportToCSV(cldiData CLDIData) {
 	w.csvWriter.Write([]string{cldiData.CLDI, cldiData.PUB, cldiData.tabletLines["loc"], cldiData.tabletLines["no"],
 		cldiData.tabletLines["translit"], cldiData.tabletLines["normalized_translit"],
-		cldiData.tabletLines["annotations"], cldiData.tabletLines["transli_entities"],
-		cldiData.tabletLines["entities"]})
+		cldiData.tabletLines["annotations"], cldiData.tabletLines["transli_entities"], cldiData.tabletLines["entities"]})
 	w.csvWriter.Flush()
 }

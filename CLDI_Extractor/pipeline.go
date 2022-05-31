@@ -1,11 +1,9 @@
 package CLDI_Extractor
 
-import (
-	"time"
-)
+import "time"
 
 func runPipeline(path, destPath string) {
-	atfParser := newATFParser(path, "")
+	atfParser := newATFParser(path)
 	atfNormalizer := newATFNormalizer(false, atfParser.out)
 	entityExtractor := newCLDIEntityExtractor(atfNormalizer.out)
 	dataWriter := newDataWriter(destPath, entityExtractor.out)
@@ -13,11 +11,11 @@ func runPipeline(path, destPath string) {
 	//does nothing for now
 	go func() {
 		println("finishing up")
-		atfParser.WaitUntilDone()
-		atfNormalizer.WaitUntilDone()
 		dataWriter.WaitUntilDone()
 		entityExtractor.WaitUntilDone()
+		atfNormalizer.WaitUntilDone()
+		atfParser.WaitUntilDone()
 
 	}()
-	time.Sleep(time.Second * 5)
+	time.Sleep(time.Second * 6)
 }

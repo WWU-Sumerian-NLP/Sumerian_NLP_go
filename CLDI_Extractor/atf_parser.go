@@ -9,21 +9,33 @@ import (
 	"strings"
 )
 
-/*
-tabletLines:
-
-Each line_no maps to a transliteration and entity
-
-
-*/
-
 //Lines map to a line_no, transliterations, normalizations and annotations
 type CLDIData struct {
-	CLDI        string
-	PUB         string
+	CLDI string
+	PUB  string
+	// TabletList  []TabletLine
 	tabletLines map[string]string
 	// mu          sync.Mutex
 }
+
+// type TabletLine struct {
+// 	TabletLocation string
+// 	tabletLines    map[string]string //map line_no to transliterations
+// 	annotation     map[string]string //map line_no to annotation
+// }
+
+/*
+for i, tabletLine := range cldiData.TabletList {
+	if entry := cldiData.annotations[i]{
+		writeToCSV(location, tabletLine[i], entry)
+	} else {
+		writeToCSV(location, tabletLine[i], "")
+	}
+}
+
+
+
+*/
 
 type ATFParser struct {
 	path         string
@@ -35,7 +47,7 @@ type ATFParser struct {
 	t            int
 }
 
-func newATFParser(path string, destPath string) *ATFParser {
+func newATFParser(path string) *ATFParser {
 	atfParser := &ATFParser{
 		path: path,
 		out:  make(chan CLDIData, 1000),
@@ -51,6 +63,7 @@ func (p *ATFParser) run() {
 		for _, line := range p.data {
 			p.parseLines(line)
 		}
+		p.out <- p.currCLDIData
 		close(p.out)
 	}()
 
@@ -108,19 +121,22 @@ func (p *ATFParser) parseLines(line string) {
 		p.currCLDIData.tabletLines = make(map[string]string)
 
 	} else if line != "" && strings.Contains(string(line[0:1]), "@") && !strings.Contains(line, "object") && !strings.Contains(line, "tablet") && !strings.Contains(line, "envelope") && !strings.Contains(line, "bulla") {
-		p.currCLDIData.tabletLines["loc"] = strings.TrimSpace(line)
+		p.currCLDIData.TabletList = make([]TabletLine, 5)
+		// tabletLine := &TabletLine{}
+		// tabletLine.TabletLocation = strings.TrimSpace(line)
+
 	} else if strings.Contains(line, "#tr.en") {
 		// You can translate tr.en entries
 		line = strings.Replace(line, "#tr.en", "", 1)
 		line = strings.Replace(line, ":", "", 1)
+
+		// TabletLine.
 		p.currCLDIData.tabletLines["annotations"] = strings.TrimSpace(line)
 
 	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") {
 		_, err := strconv.Atoi(line[0:1])
 		if err != nil {
-			println(line)
 			fmt.Printf("err: %v\n", err)
-			println("error")
 		}
 		data := strings.SplitN(line, ". ", 2)
 
