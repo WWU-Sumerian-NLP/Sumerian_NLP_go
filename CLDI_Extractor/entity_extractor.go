@@ -30,7 +30,7 @@ func newCLDIEntityExtractor(in <-chan CLDIData) *CLDIEntityExtractor {
 //and then a temporary map is created to parse through
 func (e *CLDIEntityExtractor) readNERLists(nerListName string) map[string]string {
 	//city
-	csvFile, err := os.Open(filepath.Join("../NER_lists", nerListName))
+	csvFile, err := os.Open(filepath.Join("../Annotation_lists/NER_lists", nerListName))
 	if err != nil {
 		log.Fatalf("failed reading file: %s", err)
 	}

@@ -15,5 +15,5 @@ func runPipeline(path, destPath string) {
 		atfNormalizer.WaitUntilDone()
 		atfParser.WaitUntilDone()
 	}()
-	time.Sleep(time.Second * 20)
+	time.Sleep(time.Second * 20) //todo - synchronize channels better
 }
