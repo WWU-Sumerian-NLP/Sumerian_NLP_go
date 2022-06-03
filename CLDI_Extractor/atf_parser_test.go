@@ -1,7 +1,6 @@
 package CLDI_Extractor
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/suite"
@@ -23,7 +22,6 @@ func (suite *ATFParserTestSuite) TestATFParser() {
 	for item := range parsedLines {
 		givenTabletNum = item.CLDI
 		givenPub = item.PUB
-		fmt.Printf("item: %v\n", item)
 
 	}
 	expectedTabletNum := "P142761"

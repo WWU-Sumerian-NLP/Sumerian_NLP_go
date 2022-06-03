@@ -9,12 +9,11 @@ func runPipeline(path, destPath string) {
 	dataWriter := newDataWriter(destPath, entityExtractor.out)
 
 	go func() {
-		println("finishing up")
+		println("running pipeline")
 		dataWriter.WaitUntilDone()
 		entityExtractor.WaitUntilDone()
 		atfNormalizer.WaitUntilDone()
 		atfParser.WaitUntilDone()
-
 	}()
 	time.Sleep(time.Second * 20)
 }

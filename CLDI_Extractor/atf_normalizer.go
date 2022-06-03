@@ -36,9 +36,6 @@ func (n *ATFNormalizer) run() {
 			n.out <- CLDIData
 		}
 		close(n.out)
-	}()
-
-	go func() {
 		n.done <- struct{}{}
 	}()
 

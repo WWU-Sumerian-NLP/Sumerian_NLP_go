@@ -74,31 +74,11 @@ func (e *CLDIEntityExtractor) getFromAnnotations(tableLines TabletLine) map[stri
 	for line_no, translit := range tableLines.TabletLines {
 
 		if strings.Contains(translit, "iti") {
-			// stringList := strings.Split(translit, " ")
-			// index := sort.SearchStrings(stringList, "iti")
 			tableLines.EntitiyLines[line_no] = strings.ReplaceAll(translit, "iti", "iti[month]")
-			// cldiData.tabletLines["entities"] = ""
-			// if index < len(stringList)-1 {
-			// 	cldiData.tabletLines["entities"] = stringList[index+1]
-			// 	// return cldiData
-			// }
-			// return cldiData
-
 		}
 		if strings.Contains(translit, "mu") {
-			// stringList := strings.Split(translit, " ")
-			// index := sort.SearchStrings(stringList, "mu")
 			tableLines.EntitiyLines[line_no] = strings.ReplaceAll(translit, "mu", "mu(year)")
-			// cldiData.tabletLines["entities"] = ""
-			// if index < len(stringList)-1 {
-			// 	cldiData.tabletLines["entities"] = stringList[index+1]
-			// 	return cldiData
-			// }
-			// return cldiData
 		}
-		// cldiData.tabletLines = make(map[string]string) //double check
-		// cldiData.tabletLines["transli_entities"] = ""
-		// cldiData.tabletLines["entities"] = ""
 	}
 	return tableLines.EntitiyLines
 }
@@ -111,7 +91,6 @@ func (e *CLDIEntityExtractor) getFromNERLists(tableLines TabletLine, nerMap map[
 			if strings.Contains(translit, ner) {
 				//todo - Replacement shouldn't happen at the specific instance, instead at the end of the character
 				tableLines.EntitiyLines[line_no] = strings.ReplaceAll(translit, ner, ner+"("+nerMap[ner]+")")
-				// cldiData.tabletLines["entities"] += "," + month
 			}
 		}
 	}
