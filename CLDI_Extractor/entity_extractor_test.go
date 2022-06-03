@@ -15,18 +15,17 @@ func (suite *CLDIEntityExtractorTest) TestEntityExtraction() {
 	parsedLines := make(chan CLDIData, 10)
 	entitiesParsed := make(chan CLDIData, 10)
 	parser := &ATFParser{path: "test_data/entity_extraction_input.atf", out: parsedLines, done: make(chan struct{}, 1)}
+	entityExtractor := &CLDIEntityExtractor{in: parser.out, out: entitiesParsed, done: make(chan struct{}, 1)}
+	parser.loadCLDIData()
 	parser.run()
-	parser.WaitUntilDone()
-	entityExtractor := &CLDIEntityExtractor{in: parsedLines, out: entitiesParsed, done: make(chan struct{}, 1)}
 	entityExtractor.run()
+
 	entityExtractor.WaitUntilDone()
+	parser.WaitUntilDone()
 
-	// close(outputChan)
-
-	for test := range entitiesParsed {
-		fmt.Printf("test: %v\n", test)
+	for entities := range entitiesParsed {
+		fmt.Printf("entities: %v\n", entities.TabletList[0].EntitiyLines)
 	}
-
 }
 
 func TestEntityExtractionTestSuite(t *testing.T) {

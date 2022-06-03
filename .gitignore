@@ -16,8 +16,5 @@
 
 .DS_Store
 
-atf_normalizer.go
 # atf_normalizer_test.go
-grapheme_utils.go
-entity_extractor.go
 # entity_extractor_test.go

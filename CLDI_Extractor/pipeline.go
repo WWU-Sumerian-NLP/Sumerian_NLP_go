@@ -8,7 +8,6 @@ func runPipeline(path, destPath string) {
 	entityExtractor := newCLDIEntityExtractor(atfNormalizer.out)
 	dataWriter := newDataWriter(destPath, entityExtractor.out)
 
-	//does nothing for now
 	go func() {
 		println("finishing up")
 		dataWriter.WaitUntilDone()

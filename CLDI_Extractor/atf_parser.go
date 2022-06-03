@@ -45,6 +45,7 @@ func newATFParser(path string) *ATFParser {
 }
 
 func (p *ATFParser) run() {
+
 	go func() {
 		for _, line := range p.data {
 			p.parseLines(line)
@@ -65,7 +66,6 @@ func (p *ATFParser) WaitUntilDone() {
 func (p *ATFParser) loadCLDIData() {
 	f, err := os.Open(p.path)
 	if err != nil {
-		println("issue")
 		log.Fatalf("failed reading file: %s", err)
 	}
 	defer f.Close()

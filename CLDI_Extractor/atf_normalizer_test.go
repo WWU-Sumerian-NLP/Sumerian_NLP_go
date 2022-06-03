@@ -17,13 +17,6 @@ func (suite *ATFNormalizerTestSuite) TestATFNormalizer() {
 	transliterationString := "[mu ha-ar]-szi#{ki} u3 [ki-masz{ki}] ba-hul"
 	print(transliterationString)
 	// test2 := "4(disz) gu4 amar ga 5(disz) ab2 [amar ga]"
-	// normalizer := newATFNormalizer(false)
-
-	// normalizer.rawTransliteration = transliterationString
-	// normalizer.parseRawTransliteration()
-
-	// normalizer.rawTransliteration = test2
-	// normalizer.parseRawTransliteration()
 }
 
 func (suite *ATFNormalizerTestSuite) TestATFStandardizer() {
