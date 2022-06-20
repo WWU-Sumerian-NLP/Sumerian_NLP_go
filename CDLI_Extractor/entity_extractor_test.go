@@ -24,7 +24,7 @@ func (suite *CLDIEntityExtractorTest) TestEntityExtraction() {
 	parser.WaitUntilDone()
 
 	for entities := range entitiesParsed {
-		fmt.Printf("entities: %v\n", entities.TabletList[0].EntitiyLines)
+		fmt.Printf("entities: %v\n", entities.TabletSections[0].EntitiyLines)
 	}
 }
 

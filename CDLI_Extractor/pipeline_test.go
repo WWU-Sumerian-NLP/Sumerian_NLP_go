@@ -11,7 +11,9 @@ type PipelineTestSuite struct {
 }
 
 func (suite *PipelineTestSuite) TestPipeline() {
-	runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "new_pipeline.tsv")
+	runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/new_pipeline.tsv")
+	// runCDLIParserPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/parsed_cdli.tsv")
+	// runEntityPipeline("output/parsed_cdli.tsv", "output/new_entity_pipeline.tsv")
 
 }
 

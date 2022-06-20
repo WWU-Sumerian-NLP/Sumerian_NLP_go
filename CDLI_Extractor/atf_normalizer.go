@@ -34,9 +34,9 @@ func (n *ATFNormalizer) run() {
 		defer wg.Done()
 		println("normalizing")
 		for CDLIData := range n.in {
-			for i, tabletLine := range CDLIData.TabletList {
-				tabletLine.NormalizedLines = make(map[string]string)
-				CDLIData.TabletList[i].NormalizedLines = n.parseRawTransliteration(tabletLine)
+			for i, TabletSection := range CDLIData.TabletSections {
+				TabletSection.NormalizedLines = make(map[int]string)
+				CDLIData.TabletSections[i].NormalizedLines = n.parseRawTransliteration(TabletSection)
 			}
 			n.out <- CDLIData
 		}
@@ -51,8 +51,8 @@ func (n *ATFNormalizer) WaitUntilDone() {
 	n.done <- struct{}{}
 }
 
-func (n *ATFNormalizer) parseRawTransliteration(tabletLine TabletLine) map[string]string {
-	for line_no, translit := range tabletLine.TabletLines {
+func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) map[int]string {
+	for line_no, translit := range TabletSection.TabletLines {
 		//remove comments - Apply regex expression
 		if strings.Contains(translit, "($") {
 			r, _ := regexp.Compile(comment_regex)
@@ -63,9 +63,9 @@ func (n *ATFNormalizer) parseRawTransliteration(tabletLine TabletLine) map[strin
 			grapheme = n.parseTransliterationGraphemes(grapheme)
 			allGraphemes += " " + grapheme
 		}
-		tabletLine.NormalizedLines[line_no] = strings.TrimSpace(allGraphemes)
+		TabletSection.NormalizedLines[line_no] = strings.TrimSpace(allGraphemes)
 	}
-	return tabletLine.NormalizedLines
+	return TabletSection.NormalizedLines
 }
 
 func (n *ATFNormalizer) parseTransliterationGraphemes(grapheme string) string {

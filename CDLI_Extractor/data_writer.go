@@ -4,6 +4,7 @@ import (
 	"encoding/csv"
 	"log"
 	"os"
+	"strconv"
 	"sync"
 )
 
@@ -35,11 +36,6 @@ func (w *DataWriter) run() {
 		}
 	}()
 	wg.Wait()
-
-	// go func() {
-	// 	w.done <- struct{}{}
-	// }()
-
 }
 
 func (w *DataWriter) WaitUntilDone() {
@@ -55,17 +51,18 @@ func (w *DataWriter) makeWriter() {
 	csvWriter.Comma = '\t'
 	w.csvWriter = csvWriter
 	w.csvWriter.Write([]string{"tablet num", "PUB", "loc", "no", "raw_translit", "annotations",
-		"normalized_translit", "transli_entities", "entities"}) //hardcoded
+		"normalized_translit", "translit_entities", "relations"}) //hardcoded
 	w.csvWriter.Flush()
 }
 
 func (w *DataWriter) exportToCSV(cdliData CDLIData) {
 	cldiNo := cdliData.TabletNum
 	cldiPub := cdliData.PUB
-	for _, tablet := range cdliData.TabletList {
+	for _, tablet := range cdliData.TabletSections {
 		for lineNo, translit := range tablet.TabletLines {
-			w.csvWriter.Write([]string{cldiNo, cldiPub, tablet.TabletLocation, lineNo,
-				translit, tablet.Annotation[lineNo], tablet.NormalizedLines[lineNo], tablet.EntitiyLines[lineNo]})
+			w.csvWriter.Write([]string{cldiNo, cldiPub, tablet.TabletLocation, strconv.Itoa(lineNo),
+				translit, tablet.Annotations[lineNo], tablet.NormalizedLines[lineNo], tablet.EntitiyLines[lineNo],
+				tablet.RelationLines[lineNo]})
 		}
 		w.csvWriter.Flush()
 	}

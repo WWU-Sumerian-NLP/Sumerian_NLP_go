@@ -16,5 +16,4 @@
 
 .DS_Store
 
-# atf_normalizer_test.go
-# entity_extractor_test.go
+new_pipeline.tsv
