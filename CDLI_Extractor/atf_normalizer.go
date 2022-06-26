@@ -9,7 +9,7 @@ import (
 const comment_regex = `((|-|)\(\$.+\$\)(|-|))`
 
 type ATFNormalizer struct {
-	rawTransliteration string
+	rawTransliteration []string
 	normalizeDefective bool
 	in                 <-chan CDLIData
 	out                chan CDLIData
@@ -35,7 +35,8 @@ func (n *ATFNormalizer) run() {
 		println("normalizing")
 		for CDLIData := range n.in {
 			for i, TabletSection := range CDLIData.TabletSections {
-				TabletSection.NormalizedLines = make(map[int]string)
+				TabletSection.NormalizedLines = make([]string, len(TabletSection.LineNumbers))
+				n.rawTransliteration = CDLIData.TabletSections[i].TabletLines
 				CDLIData.TabletSections[i].NormalizedLines = n.parseRawTransliteration(TabletSection)
 			}
 			n.out <- CDLIData
@@ -51,7 +52,7 @@ func (n *ATFNormalizer) WaitUntilDone() {
 	n.done <- struct{}{}
 }
 
-func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) map[int]string {
+func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) []string {
 	for line_no, translit := range TabletSection.TabletLines {
 		//remove comments - Apply regex expression
 		if strings.Contains(translit, "($") {
@@ -70,7 +71,8 @@ func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) map
 
 func (n *ATFNormalizer) parseTransliterationGraphemes(grapheme string) string {
 	grapheme = strings.ReplaceAll(grapheme, " ", "")
-	grapheme = n.replaceBracesNSlashes()
+	// grapheme = n.replaceBracesNSlashes()
+
 	grapheme = standardizeGrapheme(grapheme)
 	// sign_list := parseSigns(grapheme)
 	// // fmt.Printf("sign_list: %v\n", sign_list)
@@ -83,6 +85,7 @@ func (n *ATFNormalizer) parseTransliterationGraphemes(grapheme string) string {
 	return grapheme
 }
 
+//broken
 func (n *ATFNormalizer) replaceBracesNSlashes() string {
 	bracesList := map[string]struct{}{
 		"(": {}, ")": {},
@@ -93,7 +96,7 @@ func (n *ATFNormalizer) replaceBracesNSlashes() string {
 	}
 
 	newGrapheme := ""
-	for _, test := range n.rawTransliteration {
+	for _, test := range strings.Split(strings.Join(n.rawTransliteration, " "), " ") {
 		if newGrapheme != "" {
 			if _, ok := bracesList[string(test)]; ok {
 				if _, ok := slashList[string(newGrapheme[len(newGrapheme)-1])]; ok {
@@ -104,7 +107,7 @@ func (n *ATFNormalizer) replaceBracesNSlashes() string {
 			newGrapheme += string(test)
 		}
 	}
-	return newGrapheme
+	return string(newGrapheme)
 
 }
 

@@ -1,4 +1,4 @@
-package Data_Pipeline
+package Data_Collection
 
 import (
 	"encoding/csv"

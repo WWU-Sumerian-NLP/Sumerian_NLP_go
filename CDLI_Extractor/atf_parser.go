@@ -15,17 +15,17 @@ import (
 type CDLIData struct {
 	TabletNum      string
 	PUB            string
+	RelationTuples string
 	TabletSections []TabletSection
 }
 
 type TabletSection struct {
 	TabletLocation  string
-	TabletLines     map[int]string //map line_no to transliterations
-	NormalizedLines map[int]string
-	EntitiyLines    map[int]string
-	RelationLines   map[int]string
-	Annotations     map[int]string //map line_no to annotations
-	maxLine         int
+	LineNumbers     []int //reference each line in case of dropped lines (errors or intelligble)
+	TabletLines     []string
+	NormalizedLines []string
+	EntitiyLines    []string
+	Annotations     map[int]string
 }
 
 type ATFParser struct {
@@ -108,7 +108,7 @@ func (p *ATFParser) parseLines(line string) {
 	} else if line != "" && strings.Contains(string(line[0:1]), "@") && NotTabletSubsection(line) {
 		newTableLine := TabletSection{}
 		newTableLine.TabletLocation = strings.TrimSpace(line)
-		newTableLine.TabletLines = make(map[int]string)
+		newTableLine.TabletLines = make([]string, 0)
 
 		p.currCLDIData.TabletSections = append(p.currCLDIData.TabletSections, newTableLine)
 		p.currCLDIData.TabletSections[len(p.currCLDIData.TabletSections)-1].Annotations = make(map[int]string)
@@ -122,7 +122,7 @@ func (p *ATFParser) parseLines(line string) {
 
 		currTabletSections := p.currCLDIData.TabletSections
 		if len(currTabletSections) > 0 {
-			line_no := currTabletSections[len(currTabletSections)-1].maxLine
+			line_no := len(currTabletSections[len(currTabletSections)-1].TabletLines) - 1
 			currTabletSections[len(currTabletSections)-1].Annotations[line_no] = line
 		}
 
@@ -138,13 +138,10 @@ func (p *ATFParser) parseLines(line string) {
 
 		currTabletSections := p.currCLDIData.TabletSections
 		if len(currTabletSections) > 0 {
-			currTabletSections[len(currTabletSections)-1].TabletLines[line_no] = translit
-
-			//update line number
-			if line_no > currTabletSections[len(currTabletSections)-1].maxLine {
-				currTabletSections[len(currTabletSections)-1].maxLine = line_no
-			}
+			currTabletSections[len(currTabletSections)-1].LineNumbers = append(currTabletSections[len(currTabletSections)-1].LineNumbers, line_no)
+			currTabletSections[len(currTabletSections)-1].TabletLines = append(currTabletSections[len(currTabletSections)-1].TabletLines, translit)
 		}
+
 	}
 }
 

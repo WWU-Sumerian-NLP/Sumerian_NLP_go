@@ -1,19 +1,17 @@
 package CDLI_Extractor
 
-import (
-	"time"
-)
-
 //runPipeline will run entire pipeline
 func runPipeline(path, destPath string) {
 	atfParser := newATFParser(path)
 	atfNormalizer := newATFNormalizer(false, atfParser.out)
 	entityExtractor := newCDLIEntityExtractor(atfNormalizer.out)
-	dataWriter := newDataWriter(destPath, entityExtractor.out)
+	RelationExtractorRB := newRelationExtractorRB(entityExtractor.out)
+	dataWriter := newDataWriter(destPath, RelationExtractorRB.out)
 
 	go func() {
 		println("running pipeline")
 		dataWriter.WaitUntilDone()
+		RelationExtractorRB.WaitUntilDone()
 		entityExtractor.WaitUntilDone()
 		atfNormalizer.WaitUntilDone()
 		atfParser.WaitUntilDone()
@@ -34,7 +32,6 @@ func runCDLIParserPipeline(path, destPath string) {
 func runEntityPipeline(path, destPath string) {
 	in := readCDLIData(path)
 	println("test")
-	time.Sleep(3 * time.Second)
 	entityExtractor := newCDLIEntityExtractor(in)
 	dataWriter := newDataWriter(destPath, entityExtractor.out)
 

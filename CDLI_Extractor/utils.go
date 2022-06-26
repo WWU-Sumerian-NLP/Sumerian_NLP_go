@@ -2,14 +2,19 @@ package CDLI_Extractor
 
 import (
 	"encoding/csv"
+	"fmt"
 	"io"
 	"log"
 	"os"
-
-	"github.com/jszwec/csvutil"
 )
 
-type Strings []string
+type TSVData struct {
+	tabletNum    string
+	PUB          string
+	loc          string
+	no           string
+	raw_translit string
+}
 
 func readCDLIData(path string) chan CDLIData {
 	csvFile, err := os.Open(path)
@@ -21,26 +26,32 @@ func readCDLIData(path string) chan CDLIData {
 	csvReader := csv.NewReader(csvFile)
 	csvReader.Comma = '\t'
 
-	dec, err := csvutil.NewDecoder(csvReader)
-	if err != nil {
-		log.Fatal(err)
-	}
 	in := make(chan CDLIData, 1000000)
-	var cdliDataList []CDLIData
+	var cdliDataList []TSVData
 
 	for {
-		var c CDLIData
-		if err := dec.Decode(&c); err == io.EOF {
+		var data TSVData
+		tsvData, err := csvReader.Read()
+		fmt.Printf("tsvData: %v\n", tsvData)
+		if err == io.EOF {
 			break
-		} else if err != nil {
+		}
+		if err != nil {
+			log.Printf("issue here")
 			log.Fatal(err)
 		}
-		cdliDataList = append(cdliDataList, c)
+		data.tabletNum = tsvData[0]
+		data.PUB = tsvData[1]
+		data.loc = tsvData[2]
+		data.no = tsvData[3]
+		data.raw_translit = tsvData[4]
+		cdliDataList = append(cdliDataList, data)
 	}
 
-	for _, cdliData := range cdliDataList {
-		in <- cdliData
-	}
-	close(in)
+	// for _, cdliData := range cdliDataList {
+	// 	fmt.Printf("cdliData: %v\n", cdliData)
+	// 	in <- cdliData
+	// }
+	// close(in)
 	return in
 }
