@@ -2,7 +2,6 @@ package IE_Extractor
 
 import (
 	"encoding/csv"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -97,7 +96,6 @@ func (p *CDLIParser) readCDLIData() {
 	for {
 		var data TSVData
 		tsvData, err := csvReader.Read()
-		fmt.Printf("tsvData: %v\n", tsvData)
 		if err == io.EOF {
 			break
 		}

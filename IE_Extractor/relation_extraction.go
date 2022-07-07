@@ -8,26 +8,25 @@ import (
 )
 
 const findParenthesis = `\([^)]*\)|\[[^\]]*\]g`
-
-// const findParenthesis = `\(*,[^)]*\)|\[[^\]]*\]g` //regex gets ,O where O is a tag
-// const findParenthesis = `\(*[^,)]*\)|\[[^\]]*\]g` //regex gets
-
 const findInnerParenthesis = `\([^DU(,)]*\)|\[[^\]]*\]g` //regex gets inner para like 1(disz) except DEL
 
 type RelationExtractorRB struct {
-	in   <-chan TaggedTransliterations
-	out  chan TaggedTransliterations
-	done chan struct{}
-	re   *regexp.Regexp
-	re2  *regexp.Regexp
+	in            <-chan TaggedTransliterations
+	out           chan TaggedTransliterations
+	done          chan struct{}
+	regexRuleList []string
+	re            *regexp.Regexp
+	re2           *regexp.Regexp
 }
 
 func newRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractorRB {
 	relationExtractor := &RelationExtractorRB{
-		in:   in,
-		out:  make(chan TaggedTransliterations, 1000000),
-		done: make(chan struct{}, 1),
+		in:            in,
+		out:           make(chan TaggedTransliterations, 1000000),
+		regexRuleList: make([]string, 0),
+		done:          make(chan struct{}, 1),
 	}
+	relationExtractor.regexRuleList = []string{`ANIM PN [O\s?]*DEL`, `ANIM [O\s?]* PN REC`}
 	re, _ := regexp.Compile(findParenthesis)
 	re_2, _ := regexp.Compile(findInnerParenthesis)
 	relationExtractor.re = re
@@ -48,8 +47,10 @@ func (r *RelationExtractorRB) run() {
 		println("relation extraction")
 		defer wg.Done()
 		for cdliData := range r.in {
-			cdliData.deliveryRelations = r.getFromRules(cdliData.taggedTranslit)
-			cdliData.recievedRelations = r.getFromRecRules(cdliData.taggedTranslit)
+			for _, regexRule := range r.regexRuleList {
+				fmt.Printf("regexRule: %v\n", regexRule)
+				r.extractFromRegexRules(cdliData.taggedTranslit, regexRule)
+			}
 			r.out <- cdliData
 		}
 		println("DONE")
@@ -58,206 +59,81 @@ func (r *RelationExtractorRB) run() {
 	wg.Wait()
 }
 
-/*
-Evaluate an entire tablet. Parse (sumerian_graphme, NER_label) - function to extract NER_labels = everything must have a label
+func (r *RelationExtractorRB) extractFromRegexRules(allTabletLines string, regexRule string) []string {
+	//temporarily filter out mu-kux(DU) to remove inner parathesis
+	firstPass := strings.ReplaceAll(allTabletLines, "mu-kux(DU)", "mu-kux-DU")
 
-If we find this sequence, lets extract the entire relation
+	//Replace inner parathesis except those with characters [DU] (small error for now) 1(disz) gets mapped to 1
+	secondPass := r.re2.ReplaceAllString(firstPass, "")
 
-ANIM
-PN
-DEL
-PN REC
+	//regex expression to split by parathesis
+	graphemeWithTag := r.re.FindAllString(secondPass, 100)
 
-Assuming PN1 != PN2
-
-Iterate through (, )
-1. Check to see if there is a comma (grapheme, O)
-2. If there is a comma, then split by commma [grapheme, O]
-3. Put all tags in a list [O, O, ANIM, O, PN, DEL, PN, REC]
-
-
-*/
-func (r *RelationExtractorRB) getFromRules(allTabletLines string) []string {
-	// fmt.Printf("allTabletLines: %v\n", allTabletLines)
-	//temporarily filter out strings like  1(disz)
-	tabletLines := strings.ReplaceAll(allTabletLines, "mu-kux(DU)", "mu-ku-DU") //temporary
-	r.re2.ReplaceAllString(tabletLines, "")
-	inTag := r.re.FindAllString(tabletLines, 100)
-	fmt.Printf("inTag: %v\n", inTag)
-	// fmt.Printf("inTag: %v\n", inTag)
-	tagList := []string{}
-	for _, tag := range inTag { //filters out items like 1(disz)
-		if strings.Contains(tag, ",") {
-			new_tag := strings.Split(tag, ",")[1]
-			tagList = append(tagList, new_tag[0:len(new_tag)-1])
-		} else {
-			tagList = append(tagList, "O")
-		}
-	}
+	tagList := r.createTagList(graphemeWithTag)
 	fmt.Printf("tagList: %v\n", tagList)
-	/*
-	   mu du (delivery) rule
 
-	   ANIM
-	   Person 1 PN
-	   mu-kux(DU) DEL
-	   Person 2 PN i3-dab5 REC
-	*/
 	finalList := []string{}
-	tupleList := []string{}
 
-	//ANIM PN DEL
-	regexAbove := `ANIM PN [O\s?]*DEL`
-	findPat, _ := regexp.Compile(regexAbove)
+	findPat, _ := regexp.Compile(regexRule)
 
-	//PN REC ANIM
+	desiredTagSequence := findPat.FindAllString(strings.Join(tagList, " "), 10)
+	desiredTagSequence = strings.Split(strings.Join(desiredTagSequence, " "), " ")
+	fmt.Printf("desiredTagSequence: %v\n", desiredTagSequence)
 
-	// test := findPat.FindAllString(strings.Join(tagList, " "), 100)
-	// fmt.Printf("test: %v\n", test)
-	//Person delivered animal
-
-	// (ANIM, 0), (ANIM, 1), (PN, 2), (O, 3), (DEL, 4)
-
-	// println("HERE")
-	desiredSequence := findPat.FindAllString(strings.Join(tagList, " "), 10)
-	desiredSequence = strings.Split(strings.Join(desiredSequence, " "), " ")
-
-	fmt.Printf("NEWdesiredSequence: %v\n", desiredSequence)
-	fmt.Printf("len(desiredSequence): %v\n", len(desiredSequence))
-
-	if len(desiredSequence) > 1 {
-		pos := 0
-		for i, tag := range tagList {
-			fmt.Printf("pos: %v\n", pos)
-			fmt.Printf("tag: %v\n", tag)
-			fmt.Printf("desiredSequence[pos]: %v\n", desiredSequence[pos])
-
-			if tag == desiredSequence[pos] {
-				pos += 1
-				if tag != "O" {
-					new_tag := strings.Split(inTag[i], ",")[0]
-					tupleList = append(tupleList, new_tag[1:])
-				}
-
-			} else {
-				pos = 0
-				tupleList = []string{}
-			}
-
-			if pos == len(desiredSequence)-1 {
-				new_tag := strings.Split(inTag[i+1], ",")[0]
-				tupleList = append(tupleList, new_tag[1:]) //weird issue of not adding ending
-				finalList = append(finalList, strings.Join(tupleList, " "))
-				break
-			}
-		}
+	if len(desiredTagSequence) > 1 {
+		finalList = r.findRegexMatchFromTagSequence(desiredTagSequence, tagList, graphemeWithTag)
 	}
-	fmt.Printf("tupleList: %v\n", tupleList)
 	fmt.Printf("finalList: %v\n", finalList)
 	return finalList
 
-	/*
-		ba-zi (disposition) rule
-		ANIM DIS ki PN-ta REC
-
-		ANIM
-		Disposition
-		ki Person-ta ba-zi
-	*/
-
-	/*
-		sz ba-ti
-	*/
 }
 
-func (r *RelationExtractorRB) getFromRecRules(allTabletLines string) []string {
-	// fmt.Printf("allTabletLines: %v\n", allTabletLines)
-	//temporarily filter out strings like  1(disz)
-	tabletLines := strings.ReplaceAll(allTabletLines, "mu-kux(DU)", "mu-ku-DU") //temporary
-	r.re2.ReplaceAllString(tabletLines, "")
-	inTag := r.re.FindAllString(tabletLines, 100)
-	fmt.Printf("inTag: %v\n", inTag)
-	// fmt.Printf("inTag: %v\n", inTag)
+func (r *RelationExtractorRB) createTagList(graphemeWithTag []string) []string {
 	tagList := []string{}
-	for _, tag := range inTag { //filters out items like 1(disz)
-		if strings.Contains(tag, ",") {
-			new_tag := strings.Split(tag, ",")[1]
-			tagList = append(tagList, new_tag[0:len(new_tag)-1])
+	for _, tag := range graphemeWithTag {
+		if strings.Contains(tag, ",") { //some erros with inner parathesis, which is why this exists, it filters 1(disz)
+			newTag := strings.Split(tag, ",")[1]
+			tagList = append(tagList, newTag[0:len(newTag)-1]) //Splitting on "," yield [(object,], [tag,)], we don't want parathesis
 		} else {
 			tagList = append(tagList, "O")
 		}
 	}
-	fmt.Printf("tagList: %v\n", tagList)
-	/*
-	   mu du (delivery) rule
+	return tagList
+}
 
-	   ANIM
-	   Person 1 PN
-	   mu-kux(DU) DEL
-	   Person 2 PN i3-dab5 REC
-	*/
-	finalList := []string{}
+/*
+	String matching algorithm - Given a desired tag sequence found from our regex expression
+	We want to trace the tagList to find this sequence. As we find the seqequence, we start building
+	a slice based on corresponding graphemes. If successful, we add this sequence else we reset
+*/
+func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence []string, tagList []string, graphemeWithTag []string) []string {
 	tupleList := []string{}
+	finalList := []string{}
 
-	regexAbove := `ANIM [O\s?]* PN REC`
-	findPat, _ := regexp.Compile(regexAbove)
+	pos := 0
+	for i, tag := range tagList {
+		fmt.Printf("pos: %v\n", pos)
+		fmt.Printf("tag: %v\n", tag)
+		fmt.Printf("desiredTagSequence[pos]: %v\n", desiredTagSequence[pos])
 
-	//PN REC ANIM
-
-	// test := findPat.FindAllString(strings.Join(tagList, " "), 100)
-	// fmt.Printf("test: %v\n", test)
-	//Person delivered animal
-
-	// (ANIM, 0), (ANIM, 1), (PN, 2), (O, 3), (DEL, 4)
-
-	// println("HERE")
-	desiredSequence := findPat.FindAllString(strings.Join(tagList, " "), 10)
-	desiredSequence = strings.Split(strings.Join(desiredSequence, " "), " ")
-
-	fmt.Printf("NEWdesiredSequence: %v\n", desiredSequence)
-	fmt.Printf("len(desiredSequence): %v\n", len(desiredSequence))
-
-	if len(desiredSequence) > 1 {
-		pos := 0
-		for i, tag := range tagList {
-			fmt.Printf("pos: %v\n", pos)
-			fmt.Printf("tag: %v\n", tag)
-			fmt.Printf("desiredSequence[pos]: %v\n", desiredSequence[pos])
-
-			if tag == desiredSequence[pos] {
-				pos += 1
-				if tag != "O" {
-					new_tag := strings.Split(inTag[i], ",")[0]
-					tupleList = append(tupleList, new_tag[1:])
-				}
-
-			} else {
-				pos = 0
-				tupleList = []string{}
+		if tag == desiredTagSequence[pos] {
+			pos += 1
+			if tag != "O" {
+				new_tag := strings.Split(graphemeWithTag[i], ",")[0]
+				tupleList = append(tupleList, new_tag[1:])
 			}
 
-			if pos == len(desiredSequence)-1 {
-				new_tag := strings.Split(inTag[i+1], ",")[0]
-				tupleList = append(tupleList, new_tag[1:]) //weird issue of not adding ending
-				finalList = append(finalList, strings.Join(tupleList, " "))
-				break
-			}
+		} else {
+			pos = 0
+			tupleList = []string{}
+		}
+
+		if pos == len(desiredTagSequence)-1 {
+			new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
+			tupleList = append(tupleList, new_tag[1:]) //weird issue of not adding last tag
+			finalList = append(finalList, strings.Join(tupleList, " "))
+			break
 		}
 	}
-	fmt.Printf("tupleList: %v\n", tupleList)
-	fmt.Printf("finalList: %v\n", finalList)
 	return finalList
-
-	/*
-		ba-zi (disposition) rule
-		ANIM DIS ki PN-ta REC
-
-		ANIM
-		Disposition
-		ki Person-ta ba-zi
-	*/
-
-	/*
-		sz ba-ti
-	*/
 }
