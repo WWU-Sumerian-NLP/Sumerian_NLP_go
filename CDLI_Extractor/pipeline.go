@@ -5,13 +5,11 @@ func runPipeline(path, destPath string) {
 	atfParser := newATFParser(path)
 	atfNormalizer := newATFNormalizer(false, atfParser.out)
 	entityExtractor := newCDLIEntityExtractor(atfNormalizer.out)
-	RelationExtractorRB := newRelationExtractorRB(entityExtractor.out)
-	dataWriter := newDataWriter(destPath, RelationExtractorRB.out)
+	dataWriter := newDataWriter(destPath, entityExtractor.out)
 
 	go func() {
 		println("running pipeline")
 		dataWriter.WaitUntilDone()
-		RelationExtractorRB.WaitUntilDone()
 		entityExtractor.WaitUntilDone()
 		atfNormalizer.WaitUntilDone()
 		atfParser.WaitUntilDone()

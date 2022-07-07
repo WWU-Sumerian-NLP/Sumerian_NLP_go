@@ -50,7 +50,7 @@ func (w *DataWriter) makeWriter() {
 	csvWriter := csv.NewWriter(csvFile)
 	csvWriter.Comma = '\t'
 	w.csvWriter = csvWriter
-	w.csvWriter.Write([]string{"tablet num", "PUB", "loc", "no", "raw_translit", "annotations",
+	w.csvWriter.Write([]string{"tablet num", "PUB", "Providence", "Period", "Dates Referenced", "loc", "no", "raw_translit", "annotations",
 		"normalized_translit", "transli_entities", "relations"}) //hardcoded
 	w.csvWriter.Flush()
 }
@@ -58,10 +58,14 @@ func (w *DataWriter) makeWriter() {
 func (w *DataWriter) exportToCSV(cdliData CDLIData) {
 	cldiNo := cdliData.TabletNum
 	cldiPub := cdliData.PUB
+	cdliProv := cdliData.Provenience
+	cdliPeriod := cdliData.Period
+	cdliDates := cdliData.DatesReferenced
+
 	relationTuples := cdliData.RelationTuples
 	for _, tablet := range cdliData.TabletSections {
 		for i, lineNo := range tablet.LineNumbers {
-			w.csvWriter.Write([]string{cldiNo, cldiPub, tablet.TabletLocation, strconv.Itoa(lineNo),
+			w.csvWriter.Write([]string{cldiNo, cldiPub, cdliProv, cdliPeriod, cdliDates, tablet.TabletLocation, strconv.Itoa(lineNo),
 				tablet.TabletLines[i], tablet.Annotations[i], tablet.NormalizedLines[i], tablet.EntitiyLines[i],
 				relationTuples})
 		}

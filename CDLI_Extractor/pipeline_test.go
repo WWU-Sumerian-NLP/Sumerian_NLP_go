@@ -12,7 +12,9 @@ type PipelineTestSuite struct {
 
 func (suite *PipelineTestSuite) TestPipeline() {
 	// runPipeline("test_data/entity_extraction_input.atf", "output/test_data.tsv")
-	runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/new_pipeline.tsv")
+	// runPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/new_pipeline.tsv")
+	runPipeline("../../sumerian_tablets/cdli_result_20220525.txt", "output/new_result_pipeline.tsv")
+
 	// runCDLIParserPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/parsed_cdli.tsv")
 	// runEntityPipeline("output/new_pipeline.tsv", "output/new_entity_pipeline.tsv")
 

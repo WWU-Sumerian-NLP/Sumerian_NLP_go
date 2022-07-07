@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"regexp"
 	"strings"
 	"sync"
 )
@@ -15,7 +14,7 @@ type CDLIEntityExtractor struct {
 	out     chan CDLIData
 	done    chan struct{}
 	nerList []string
-	// nerMap  map[string]map[string]string
+	nerMap  map[string]map[string]string
 }
 
 func newCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
@@ -24,8 +23,9 @@ func newCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 		out:     make(chan CDLIData, 1000000),
 		done:    make(chan struct{}, 1),
 		nerList: []string{"city_ner.csv", "months_ner.csv", "royalname_ner.csv", "governors_ner.csv", "people_ner.csv", "animals_ner.csv", "foreigners_ner.csv"},
-		// nerMap:  make(map[string]map[string]string, 0),
+		nerMap:  make(map[string]map[string]string, 0),
 	}
+	entityExtractor.readNERLists()
 	entityExtractor.run()
 	return entityExtractor
 }
@@ -93,27 +93,14 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 //Get from NER_lists
 func (e *CDLIEntityExtractor) getFromNERLists(grapheme string) string {
 	new_grapheme := grapheme
-	for _, list := range e.nerList { //fix
-		nerMap := e.readNERLists(list)
+	for fileName := range e.nerMap {
+		nerMap := e.nerMap[fileName]
 		if ner, ok := nerMap[grapheme]; ok {
 			new_grapheme = "(" + grapheme + "," + ner + ")"
 		}
 	}
 
 	return new_grapheme
-}
-
-func (e *CDLIEntityExtractor) extractEntityLabel(tabletLines TabletSection) []string {
-	// const findParenthesis = `\([^)]*\)|\[[^\]]*\]g`
-	const findParenthesis = `\(*,[^)]*\)|\[[^\]]*\]g` //regex gets ,O where O is a tag
-	re, _ := regexp.Compile(findParenthesis)
-	for line_no, translit := range tabletLines.TabletLines {
-		for _, grapheme := range re.Split(translit, 10) {
-			println(grapheme)
-		}
-		tabletLines.EntitiyLines[line_no] = ""
-	}
-	return []string{}
 }
 
 func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
@@ -130,21 +117,24 @@ func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
 
 }
 
-func (e *CDLIEntityExtractor) readNERLists(nerListName string) map[string]string {
-	//city
-	csvFile, err := os.Open(filepath.Join("../Annotation_lists/NER_lists", nerListName))
-	if err != nil {
-		log.Fatalf("failed reading file: %s", err)
+//Read a list of NER lists [ner.csv, ner2.csv] and store a map of filenames to a map of entity relations
+func (e *CDLIEntityExtractor) readNERLists() {
+	fileNameToNerMap := make(map[string]map[string]string, len(e.nerList))
+	for _, nerListName := range e.nerList {
+		csvFile, err := os.Open(filepath.Join("../Annotation_lists/NER_lists", nerListName))
+		if err != nil {
+			log.Fatalf("failed reading file: %s", err)
+		}
+		csvReader := csv.NewReader(csvFile)
+		nerCSV, err := csvReader.ReadAll()
+		if err != nil {
+			log.Fatalf("error: %s failed parsing file: %s", nerListName, err)
+		}
+		nerMap := make(map[string]string)
+		for _, ner := range nerCSV {
+			nerMap[ner[0]] = ner[1]
+		}
+		fileNameToNerMap[nerListName] = nerMap
+		csvFile.Close()
 	}
-	csvReader := csv.NewReader(csvFile)
-	nerCSV, err := csvReader.ReadAll()
-	if err != nil {
-		log.Fatalf("error: %s failed parsing file: %s", nerListName, err)
-	}
-	nerMap := make(map[string]string)
-	for _, ner := range nerCSV {
-		nerMap[ner[0]] = ner[1]
-	}
-	csvFile.Close()
-	return nerMap
 }

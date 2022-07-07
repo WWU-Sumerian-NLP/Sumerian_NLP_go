@@ -13,10 +13,13 @@ import (
 
 //Lines map to a line_no, transliterations, normalizations and annotations
 type CDLIData struct {
-	TabletNum      string
-	PUB            string
-	RelationTuples string
-	TabletSections []TabletSection
+	TabletNum       string
+	PUB             string
+	Provenience     string
+	Period          string
+	DatesReferenced string
+	RelationTuples  string
+	TabletSections  []TabletSection
 }
 
 type TabletSection struct {
@@ -92,12 +95,32 @@ Parse Tablet Line-By-Line.
 
 func (p *ATFParser) parseLines(line string) {
 	line = strings.TrimSpace(line)
-	if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
+
+	if line != "" && strings.Contains(line, "Primary publication") {
 		// Send tablet downstream and init new tablet object
 		if p.currCLDIData.PUB != "" {
 			p.out <- p.currCLDIData
 			p.currCLDIData = CDLIData{}
 		}
+	} else if line != "" && strings.Contains(line, "Provenience") {
+		line = strings.TrimSpace(line)
+		data := strings.Split(line, ":")[1]
+		p.currCLDIData.Provenience = data
+	} else if line != "" && strings.Contains(line, "Period") {
+		line = strings.TrimSpace(line)
+		data := strings.Split(line, ":")[1]
+		p.currCLDIData.Period = data
+	} else if line != "" && strings.Contains(line, "Dates referenced") {
+		line = strings.TrimSpace(line)
+		data := strings.Split(line, ":")[1]
+		p.currCLDIData.DatesReferenced = data
+
+	} else if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
+		// // Send tablet downstream and init new tablet object
+		// if p.currCLDIData.PUB != "" {
+		// 	p.out <- p.currCLDIData
+		// 	p.currCLDIData = CDLIData{}
+		// }
 		line = strings.ReplaceAll(line, "&", "")
 		line = strings.TrimSpace(line)
 		data := strings.SplitN(line, " = ", 2)
@@ -130,16 +153,18 @@ func (p *ATFParser) parseLines(line string) {
 	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") {
 		_, err := strconv.Atoi(line[0:1])
 		if err != nil {
-			fmt.Printf("err: %v\n", err)
-		}
-		data := strings.SplitN(line, ". ", 2)
-		line_no := findLineNumber(&p.re, data[0])
-		translit := strings.TrimSpace(data[1])
+			fmt.Printf("err: %v for %s\n", err, line)
+		} else { // fix later
 
-		currTabletSections := p.currCLDIData.TabletSections
-		if len(currTabletSections) > 0 {
-			currTabletSections[len(currTabletSections)-1].LineNumbers = append(currTabletSections[len(currTabletSections)-1].LineNumbers, line_no)
-			currTabletSections[len(currTabletSections)-1].TabletLines = append(currTabletSections[len(currTabletSections)-1].TabletLines, translit)
+			data := strings.SplitN(line, ". ", 2)
+			line_no := findLineNumber(&p.re, data[0])
+			translit := strings.TrimSpace(data[1])
+
+			currTabletSections := p.currCLDIData.TabletSections
+			if len(currTabletSections) > 0 {
+				currTabletSections[len(currTabletSections)-1].LineNumbers = append(currTabletSections[len(currTabletSections)-1].LineNumbers, line_no)
+				currTabletSections[len(currTabletSections)-1].TabletLines = append(currTabletSections[len(currTabletSections)-1].TabletLines, translit)
+			}
 		}
 
 	}
