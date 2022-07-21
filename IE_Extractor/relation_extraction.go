@@ -11,27 +11,29 @@ const findParenthesis = `\([^)]*\)|\[[^\]]*\]g`
 const findInnerParenthesis = `\([^DU(,)]*\)|\[[^\]]*\]g` //regex gets inner para like 1(disz) except DEL
 
 type RelationExtractorRB struct {
-	in            <-chan TaggedTransliterations
-	out           chan TaggedTransliterations
-	done          chan struct{}
-	regexRuleList []string
-	re            *regexp.Regexp
-	re2           *regexp.Regexp
+	in               <-chan TaggedTransliterations
+	out              chan RelationData
+	done             chan struct{}
+	regexRuleList    []string
+	re               *regexp.Regexp
+	re2              *regexp.Regexp
+	relationDataList []RelationData
 }
 
 func newRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractorRB {
 	relationExtractor := &RelationExtractorRB{
 		in:            in,
-		out:           make(chan TaggedTransliterations, 1000000),
+		out:           make(chan RelationData, 1000000),
 		regexRuleList: make([]string, 0),
 		done:          make(chan struct{}, 1),
 	}
-	relationExtractor.regexRuleList = []string{`ANIM PN [O\s?]*DEL`, `ANIM [O\s?]* PN REC`}
+	relationExtractor.regexRuleList = []string{`ANIM [O\s?]*PN [O\s?]*DEL`, `ANIM [O\s?]*PN [O\s?]*REC`, `ANIM [O\s?]*FOR [O\s?]*DEL`}
 	re, _ := regexp.Compile(findParenthesis)
 	re_2, _ := regexp.Compile(findInnerParenthesis)
 	relationExtractor.re = re
 	relationExtractor.re2 = re_2
 
+	relationExtractor.relationDataList = readRelationTypesCsv("tests/relation_input.tsv")
 	relationExtractor.run()
 	return relationExtractor
 }
@@ -47,11 +49,18 @@ func (r *RelationExtractorRB) run() {
 		println("relation extraction")
 		defer wg.Done()
 		for cdliData := range r.in {
-			for _, regexRule := range r.regexRuleList {
-				fmt.Printf("regexRule: %v\n", regexRule)
-				r.extractFromRegexRules(cdliData.taggedTranslit, regexRule)
+			for _, relationData := range r.relationDataList { //read through relation_input.csv
+				relationData.tabletNum = cdliData.TabletNum
+				extractedRelationTuple := r.extractFromRegexRules(cdliData.taggedTranslit, relationData.regexRules)
+				if len(extractedRelationTuple) == 3 {
+					fmt.Printf("extractedRelationTuple: %v\n", extractedRelationTuple)
+					relationTuple := relationData.getRelationTuple(strings.Split(relationData.tags, ","), extractedRelationTuple)
+					fmt.Printf("relationData.relationTuple: %v\n", relationData.relationTuple)
+					relationData.relationTuple = relationTuple
+					r.out <- relationData
+
+				}
 			}
-			r.out <- cdliData
 		}
 		println("DONE")
 		close(r.out)
@@ -75,6 +84,7 @@ func (r *RelationExtractorRB) extractFromRegexRules(allTabletLines string, regex
 	finalList := []string{}
 
 	findPat, _ := regexp.Compile(regexRule)
+	fmt.Printf("findPat: %v\n", findPat)
 
 	desiredTagSequence := findPat.FindAllString(strings.Join(tagList, " "), 10)
 	desiredTagSequence = strings.Split(strings.Join(desiredTagSequence, " "), " ")
@@ -83,8 +93,10 @@ func (r *RelationExtractorRB) extractFromRegexRules(allTabletLines string, regex
 	if len(desiredTagSequence) > 1 {
 		finalList = r.findRegexMatchFromTagSequence(desiredTagSequence, tagList, graphemeWithTag)
 	}
-	fmt.Printf("finalList: %v\n", finalList)
-	return finalList
+	finalListModified := strings.Split(strings.Join(finalList, " "), " ")
+	fmt.Printf("finalListModified: %v\n", finalListModified)
+	println("LENGTH:", len(finalListModified))
+	return finalListModified
 
 }
 
@@ -105,6 +117,8 @@ func (r *RelationExtractorRB) createTagList(graphemeWithTag []string) []string {
 	String matching algorithm - Given a desired tag sequence found from our regex expression
 	We want to trace the tagList to find this sequence. As we find the seqequence, we start building
 	a slice based on corresponding graphemes. If successful, we add this sequence else we reset
+
+	Tail Head Relation
 */
 func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence []string, tagList []string, graphemeWithTag []string) []string {
 	tupleList := []string{}
@@ -127,10 +141,9 @@ func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence [
 			pos = 0
 			tupleList = []string{}
 		}
-
 		if pos == len(desiredTagSequence)-1 {
-			new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
-			tupleList = append(tupleList, new_tag[1:]) //weird issue of not adding last tag
+			// new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
+			// tupleList = append(tupleList, new_tag[1:]) //TODO: weird issue of not adding last tag
 			finalList = append(finalList, strings.Join(tupleList, " "))
 			break
 		}

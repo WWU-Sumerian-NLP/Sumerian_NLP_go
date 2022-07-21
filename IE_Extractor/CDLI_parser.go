@@ -11,8 +11,9 @@ import (
 type TaggedTransliterations struct {
 	TabletNum         string
 	taggedTranslit    string //the entire tablets content
-	deliveryRelations []string
-	recievedRelations []string
+	Providence        string
+	Period            string
+	DateReferenced    string
 }
 type CDLIParser struct {
 	path               string
@@ -57,7 +58,6 @@ func (p *CDLIParser) run() {
 
 		prevTabletNum := ""
 		for _, tablet := range p.data {
-			// fmt.Printf("tablet: %v\n", tablet)
 			p.collapseTabletTranslit(tablet, prevTabletNum)
 			prevTabletNum = tablet.tabletNum
 		}
@@ -73,8 +73,7 @@ func (p *CDLIParser) WaitUntilDone() {
 
 func (p *CDLIParser) collapseTabletTranslit(tablet TSVData, prevTabletNum string) {
 	if prevTabletNum != tablet.tabletNum {
-		taggedTranslit := &TaggedTransliterations{TabletNum: prevTabletNum, taggedTranslit: p.currTabletTranslit}
-		// fmt.Printf("taggedTranslit: %v\n", taggedTranslit)
+		taggedTranslit := &TaggedTransliterations{TabletNum: prevTabletNum, taggedTranslit: p.currTabletTranslit, Providence: tablet.Providence, Period: tablet.Period, DateReferenced: tablet.DatesReferenced}
 		p.currTabletTranslit = ""
 		p.out <- *taggedTranslit
 	} else {
@@ -116,7 +115,6 @@ func (p *CDLIParser) readCDLIData() {
 		data.transli_entites = tsvData[10]
 
 		p.data = append(p.data, data)
-		// cdliDataList = append(cdliDataList, data)
 	}
 
 }

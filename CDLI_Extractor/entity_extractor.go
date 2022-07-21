@@ -81,6 +81,7 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 				} else if i > 0 && grapheme_list[i-1] == "mu" {
 					grapheme = "(" + grapheme + "," + "YR" + ")"
 				} else {
+					println(grapheme)
 					grapheme = "(" + grapheme + "," + "O" + ")"
 				}
 			}
@@ -137,4 +138,5 @@ func (e *CDLIEntityExtractor) readNERLists() {
 		fileNameToNerMap[nerListName] = nerMap
 		csvFile.Close()
 	}
+	e.nerMap = fileNameToNerMap
 }

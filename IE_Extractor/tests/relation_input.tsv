@@ -1,0 +1,3 @@
+relationType    	subjectTag  	objectTag   	regexRules  	tags
+person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL 	ANIM, PN, DEL
+person:recieves_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC 	ANIM, PN, REC

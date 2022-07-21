@@ -4,18 +4,17 @@ import (
 	"encoding/csv"
 	"log"
 	"os"
-	"strings"
 	"sync"
 )
 
 type DataWriter struct {
 	destPath  string
-	in        <-chan TaggedTransliterations
+	in        <-chan RelationData
 	done      chan struct{}
 	csvWriter *csv.Writer
 }
 
-func newDataWriter(destPath string, in <-chan TaggedTransliterations) *DataWriter {
+func newDataWriter(destPath string, in <-chan RelationData) *DataWriter {
 	dataWriter := &DataWriter{
 		destPath: destPath,
 		in:       in,
@@ -31,8 +30,8 @@ func (w *DataWriter) run() {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		for cdliData := range w.in {
-			w.exportToCSV(cdliData)
+		for relationData := range w.in {
+			w.exportToCSV(relationData)
 		}
 	}()
 	wg.Wait()
@@ -50,16 +49,17 @@ func (w *DataWriter) makeWriter() {
 	csvWriter := csv.NewWriter(csvFile)
 	csvWriter.Comma = '\t'
 	w.csvWriter = csvWriter
-	w.csvWriter.Write([]string{"tablet num", "tagged_translit", "delivery_rel", "recieved_rel"}) //hardcoded
+	w.csvWriter.Write([]string{"tablet_num", "relation_type", "subject", "object"}) //hardcoded
 	w.csvWriter.Flush()
 }
 
-func (w *DataWriter) exportToCSV(cdliData TaggedTransliterations) {
-	cldiNo := cdliData.TabletNum
-	cdliTaggedTranslit := cdliData.taggedTranslit
-	delieveryTuples := strings.Join(cdliData.deliveryRelations, " ")
-	recievedTuples := strings.Join(cdliData.recievedRelations, " ")
-	w.csvWriter.Write([]string{cldiNo, cdliTaggedTranslit, delieveryTuples, recievedTuples})
+func (w *DataWriter) exportToCSV(relationData RelationData) {
+	tabletNum := relationData.tabletNum
+	relationType := relationData.relationType
+	relationSubject := relationData.relationTuple[1]
+	relationObject := relationData.relationTuple[2]
+
+	w.csvWriter.Write([]string{tabletNum, relationType, relationSubject, relationObject})
 
 	w.csvWriter.Flush()
 
