@@ -29,23 +29,28 @@ func newRelationData(relationType string, regexRules string, subject string, obj
 // object - ANIM
 // Expected: RelationTuple - (person:delivers_animals, person_word, animal_word)
 
-// ExtractedTuple - (PN, ANIM DEL)
-// TransliterationTuple - (person_word, animal_word, mu-kux(DU))
-//Refine this algorithm to be more in general
-//we should loop better
-func (r *RelationData) getRelationTuple(extractedTuple []string, transliterationTuple []string) [3]string {
+// extractedRegexTuple - (PN, ANIM DEL) ---> (DEL, PN, ANIM)
+
+func (r *RelationData) getRelationTuple(extractedRegexTuple []string, transliterationTuple []string) [3]string {
 	relationTuple := [3]string{}
 
+	//make function
+	translitMap := make(map[string]int, 0)
+	for i, translit := range transliterationTuple {
+		println("HERE", translit, i)
+		translitMap[translit] = i
+	}
+	fmt.Printf("transliterationTuple: %v\n", transliterationTuple)
 	relationTuple[0] = r.relationType
-	fmt.Printf("extractedTuple: %v\n", extractedTuple)
-	for _, tag := range extractedTuple {
+	fmt.Printf("extractedTuple: %v\n", extractedRegexTuple)
+	for i, tag := range extractedRegexTuple {
 		tag = strings.TrimSpace(tag)
 		r.subjectTag = strings.TrimSpace(r.subjectTag) //fix later
 		r.objectTag = strings.TrimSpace(r.objectTag)
 		if tag == r.subjectTag {
-			relationTuple[1] = transliterationTuple[1]
+			relationTuple[1] = transliterationTuple[i]
 		} else if tag == r.objectTag {
-			relationTuple[2] = transliterationTuple[0]
+			relationTuple[2] = transliterationTuple[i]
 		}
 	}
 	fmt.Printf("relationTuple: %v\n", relationTuple)

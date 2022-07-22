@@ -1,3 +1,4 @@
 relationType    	subjectTag  	objectTag   	regexRules  	tags
 person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL 	ANIM, PN, DEL
-person:recieves_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC 	ANIM, PN, REC
+person:receives_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC 	ANIM, PN, REC
+foreigner:delivers_animal	FOR	ANIM 	ANIM [O\s?]*FOR [O\s?]*DEL	ANIM, FOR, DEL
