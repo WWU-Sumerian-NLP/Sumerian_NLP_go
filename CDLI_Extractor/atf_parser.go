@@ -29,6 +29,7 @@ type TabletSection struct {
 	NormalizedLines []string
 	EntitiyLines    []string
 	Annotations     map[int]string
+	isBroken        bool
 }
 
 type ATFParser struct {

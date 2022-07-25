@@ -142,8 +142,8 @@ func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence [
 			tupleList = []string{}
 		}
 		if pos == len(desiredTagSequence)-1 {
-			// new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
-			// tupleList = append(tupleList, new_tag[1:]) //TODO: weird issue of not adding last tag
+			new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
+			tupleList = append(tupleList, new_tag[1:]) //TODO: weird issue of not adding last tag
 			finalList = append(finalList, strings.Join(tupleList, " "))
 			break
 		}

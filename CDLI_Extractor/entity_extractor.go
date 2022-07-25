@@ -106,6 +106,7 @@ func (e *CDLIEntityExtractor) getFromNERLists(grapheme string) string {
 	return new_grapheme
 }
 
+//TODO - Read a list?
 func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
 	if grapheme == "mu-kux(DU)" {
 		grapheme = "(" + grapheme + "," + "DEL" + ")"
@@ -115,6 +116,12 @@ func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
 		grapheme = "(" + grapheme + "," + "DIS" + ")"
 	} else if grapheme == "ba-ti" { //this is wrong, should be sz ba-ti
 		grapheme = "(" + grapheme + "," + "REC" + ")"
+	} else if grapheme == "dumu" {
+		grapheme = "(" + grapheme + "," + "SON" + ")"
+	} else if grapheme == "ab" {
+		grapheme = "(" + grapheme + "," + "FATHER" + ")"
+	} else if grapheme == "dam" {
+		grapheme = "(" + grapheme + "," + "WIFE" + ")"
 	}
 	return grapheme
 
