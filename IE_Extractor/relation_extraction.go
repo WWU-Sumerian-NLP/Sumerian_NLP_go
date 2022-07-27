@@ -120,6 +120,8 @@ func (r *RelationExtractorRB) createTagList(graphemeWithTag []string) []string {
 
 	Tail Head Relation
 */
+
+//PN ANIM DEL
 func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence []string, tagList []string, graphemeWithTag []string) []string {
 	tupleList := []string{}
 	finalList := []string{}
@@ -137,13 +139,13 @@ func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence [
 				tupleList = append(tupleList, new_tag[1:])
 			}
 
-		} else {
+		} else { //reset sequence because it is not an exact match
 			pos = 0
 			tupleList = []string{}
 		}
-		if pos == len(desiredTagSequence)-1 {
-			new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
-			tupleList = append(tupleList, new_tag[1:]) //TODO: weird issue of not adding last tag
+		if pos == len(desiredTagSequence) {
+			// new_tag := strings.Split(graphemeWithTag[i+1], ",")[0]
+			// tupleList = append(tupleList, new_tag[1:]) //TODO: weird issue of not adding last tag
 			finalList = append(finalList, strings.Join(tupleList, " "))
 			break
 		}

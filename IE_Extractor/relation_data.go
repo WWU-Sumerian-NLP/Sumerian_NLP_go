@@ -17,6 +17,9 @@ type RelationData struct {
 	objectTag     string
 	tags          string    //how they would be extracted (ANIM PN DEL)
 	relationTuple [3]string //3-tuple (relationType, subjectString, objectString)
+
+	providence      string
+	datesReferenced string
 }
 
 func newRelationData(relationType string, regexRules string, subject string, object string) *RelationData {

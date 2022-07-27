@@ -1,5 +1,5 @@
 relationType    	subjectTag  	objectTag   	regexRules  	tags
-person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL 	ANIM, PN, DEL
-person:receives_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC 	ANIM, PN, REC
+person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL	ANIM, PN, DEL
+person:receives_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC	ANIM, PN, REC
 foreigner:delivers_animal	FOR	ANIM 	ANIM [O\s?]*FOR [O\s?]*DEL	ANIM, FOR, DEL
-person:has_son	PN	PN	PN [O\s?]*SON PN	PN, SON, PN
+person:has_son	PN_1	PN_2	PN [O\s?]*SON PN	PN_1, SON, PN_2
