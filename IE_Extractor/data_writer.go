@@ -49,7 +49,7 @@ func (w *DataWriter) makeWriter() {
 	csvWriter := csv.NewWriter(csvFile)
 	csvWriter.Comma = '\t'
 	w.csvWriter = csvWriter
-	w.csvWriter.Write([]string{"tablet_num", "relation_type", "subject", "object"}) //hardcoded
+	w.csvWriter.Write([]string{"tablet_num", "relation_type", "subject", "object", "providence", "period", "dates_referenced", "subject_tag", "object_tag"}) //hardcoded
 	w.csvWriter.Flush()
 }
 
@@ -58,8 +58,13 @@ func (w *DataWriter) exportToCSV(relationData RelationData) {
 	relationType := relationData.relationType
 	relationSubject := relationData.relationTuple[1]
 	relationObject := relationData.relationTuple[2]
+	providence := relationData.providence
+	period := relationData.period
+	datesReferenced := relationData.datesReferenced
+	subjectTag := relationData.subjectTag
+	objectTag := relationData.objectTag
 
-	w.csvWriter.Write([]string{tabletNum, relationType, relationSubject, relationObject})
+	w.csvWriter.Write([]string{tabletNum, relationType, relationSubject, relationObject, providence, period, datesReferenced, subjectTag, objectTag})
 
 	w.csvWriter.Flush()
 

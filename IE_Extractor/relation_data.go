@@ -19,6 +19,7 @@ type RelationData struct {
 	relationTuple [3]string //3-tuple (relationType, subjectString, objectString)
 
 	providence      string
+	period          string
 	datesReferenced string
 }
 

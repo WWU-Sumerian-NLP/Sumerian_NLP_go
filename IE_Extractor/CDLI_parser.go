@@ -9,11 +9,11 @@ import (
 )
 
 type TaggedTransliterations struct {
-	TabletNum         string
-	taggedTranslit    string //the entire tablets content
-	Providence        string
-	Period            string
-	DateReferenced    string
+	TabletNum      string
+	taggedTranslit string //the entire tablets content
+	Providence     string
+	Period         string
+	DateReferenced string
 }
 type CDLIParser struct {
 	path               string

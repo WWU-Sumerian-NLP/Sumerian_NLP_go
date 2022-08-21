@@ -51,8 +51,12 @@ func (r *RelationExtractorRB) run() {
 		for cdliData := range r.in {
 			for _, relationData := range r.relationDataList { //read through relation_input.csv
 				relationData.tabletNum = cdliData.TabletNum
+				relationData.providence = cdliData.Providence
+				relationData.period = cdliData.Period
+				relationData.datesReferenced = cdliData.DateReferenced
+
 				extractedRelationTuple := r.extractFromRegexRules(cdliData.taggedTranslit, relationData.regexRules)
-				if len(extractedRelationTuple) == 3 {
+				if len(extractedRelationTuple) >= 3 {
 					fmt.Printf("extractedRelationTuple: %v\n", extractedRelationTuple)
 					relationTuple := relationData.getRelationTuple(strings.Split(relationData.tags, ","), extractedRelationTuple)
 					fmt.Printf("relationData.relationTuple: %v\n", relationData.relationTuple)
