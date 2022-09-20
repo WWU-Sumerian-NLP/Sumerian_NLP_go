@@ -2,6 +2,7 @@ package IE_Extractor
 
 import (
 	"encoding/csv"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -19,7 +20,7 @@ type CDLIParser struct {
 	path               string
 	data               []TSVData
 	currTabletTranslit string
-	out                chan TaggedTransliterations
+	Out                chan TaggedTransliterations
 	done               chan struct{}
 }
 
@@ -37,10 +38,10 @@ type TSVData struct {
 	transli_entites     string
 }
 
-func newCDLIParser(path string) *CDLIParser {
+func NewCDLIParser(path string) *CDLIParser {
 	cdliParser := &CDLIParser{
 		path: path,
-		out:  make(chan TaggedTransliterations, 100000),
+		Out:  make(chan TaggedTransliterations, 10000000),
 		done: make(chan struct{}, 1),
 	}
 	cdliParser.readCDLIData()
@@ -54,10 +55,11 @@ func (p *CDLIParser) run() {
 	go func() {
 		println("CDLI parsing")
 		defer wg.Done()
-		defer close(p.out)
+		defer close(p.Out)
 
 		prevTabletNum := ""
 		for _, tablet := range p.data {
+			fmt.Printf("tablet: %v\n", tablet)
 			p.collapseTabletTranslit(tablet, prevTabletNum)
 			prevTabletNum = tablet.tabletNum
 		}
@@ -75,7 +77,7 @@ func (p *CDLIParser) collapseTabletTranslit(tablet TSVData, prevTabletNum string
 	if prevTabletNum != tablet.tabletNum {
 		taggedTranslit := &TaggedTransliterations{TabletNum: prevTabletNum, taggedTranslit: p.currTabletTranslit, Providence: tablet.Providence, Period: tablet.Period, DateReferenced: tablet.DatesReferenced}
 		p.currTabletTranslit = ""
-		p.out <- *taggedTranslit
+		p.Out <- *taggedTranslit
 	} else {
 		p.currTabletTranslit += tablet.transli_entites
 	}

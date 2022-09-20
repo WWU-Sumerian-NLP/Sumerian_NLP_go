@@ -41,10 +41,10 @@ type ATFParser struct {
 	re           regexp.Regexp
 }
 
-func newATFParser(path string) *ATFParser {
+func NewATFParser(path string) *ATFParser {
 	atfParser := &ATFParser{
 		path: path,
-		out:  make(chan CDLIData, 100000),
+		out:  make(chan CDLIData, 10000000),
 		done: make(chan struct{}, 1),
 	}
 	atfParser.loadCDLIData()
@@ -64,6 +64,7 @@ func (p *ATFParser) run() {
 			p.parseLines(line)
 		}
 		println("DONE")
+		// fmt.Printf("p.currCLDIData: %v\n", p.currCLDIData)
 		p.out <- p.currCLDIData
 	}()
 	wg.Wait()
@@ -96,11 +97,13 @@ Parse Tablet Line-By-Line.
 
 func (p *ATFParser) parseLines(line string) {
 	line = strings.TrimSpace(line)
+	// fmt.Printf("line: %v\n", line)
 
 	if line != "" && strings.Contains(line, "Primary publication") {
 		// Send tablet downstream and init new tablet object
 		if p.currCLDIData.PUB != "" {
 			p.out <- p.currCLDIData
+			fmt.Printf("p.currCLDIData: %v\n", p.currCLDIData)
 			p.currCLDIData = CDLIData{}
 		}
 	} else if line != "" && strings.Contains(line, "Provenience") {
@@ -117,11 +120,11 @@ func (p *ATFParser) parseLines(line string) {
 		p.currCLDIData.DatesReferenced = data
 
 	} else if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
-		// // Send tablet downstream and init new tablet object
-		// if p.currCLDIData.PUB != "" {
-		// 	p.out <- p.currCLDIData
-		// 	p.currCLDIData = CDLIData{}
-		// }
+		// TODO: Send tablet downstream and init new tablet object with alternative format
+		if p.currCLDIData.PUB != "" {
+			p.out <- p.currCLDIData
+			p.currCLDIData = CDLIData{}
+		}
 		line = strings.ReplaceAll(line, "&", "")
 		line = strings.TrimSpace(line)
 		data := strings.SplitN(line, " = ", 2)
@@ -151,7 +154,7 @@ func (p *ATFParser) parseLines(line string) {
 		}
 
 		// Get tablet lines
-	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") {
+	} else if !strings.Contains(line, "$") && strings.Contains(line, ". ") && !strings.Contains(string(line[0:1]), "#") && !strings.Contains(string(line[0:1]), "x") {
 		_, err := strconv.Atoi(line[0:1])
 		if err != nil {
 			fmt.Printf("err: %v for %s\n", err, line)

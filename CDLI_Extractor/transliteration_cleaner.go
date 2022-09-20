@@ -1,7 +1,6 @@
 package CDLI_Extractor
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 	"sync"
@@ -21,7 +20,7 @@ type TransliterationCleaner struct {
 func newTransliterationCleaner(dropTablets bool, in <-chan CDLIData) *TransliterationCleaner {
 	transliterationCleaner := &TransliterationCleaner{
 		in:          in,
-		out:         make(chan CDLIData, 100000),
+		out:         make(chan CDLIData, 10000000),
 		done:        make(chan struct{}, 1),
 		dropTablets: dropTablets,
 	}
@@ -92,7 +91,6 @@ func (c *TransliterationCleaner) cleanDamagedMetaCharacters(flag bool, tabletSec
 		line = re.ReplaceAllString(line, "")
 		line = re2.ReplaceAllString(line, "")
 		tabletSection.TabletLines[i] = line
-		fmt.Printf("line: %v\n", line)
 	}
 	return &tabletSection
 }

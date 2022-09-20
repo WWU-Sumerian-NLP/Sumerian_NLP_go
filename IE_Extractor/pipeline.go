@@ -2,9 +2,9 @@ package IE_Extractor
 
 //runPipeline will run entire pipeline
 func runPipeline(path, destPath string) {
-	cdliParser := newCDLIParser(path)
-	RelationExtractorRB := newRelationExtractorRB(cdliParser.out)
-	dataWriter := newDataWriter(destPath, RelationExtractorRB.out)
+	cdliParser := NewCDLIParser(path)
+	RelationExtractorRB := NewRelationExtractorRB(cdliParser.Out)
+	dataWriter := NewDataWriter(destPath, RelationExtractorRB.Out)
 
 	go func() {
 		println("running pipeline")

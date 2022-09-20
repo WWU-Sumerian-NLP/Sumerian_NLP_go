@@ -23,7 +23,7 @@ type RelationData struct {
 	datesReferenced string
 }
 
-func newRelationData(relationType string, regexRules string, subject string, object string) *RelationData {
+func NewRelationData(relationType string, regexRules string, subject string, object string) *RelationData {
 	return &RelationData{relationType: relationType, regexRules: regexRules, subjectTag: subject, objectTag: object}
 }
 

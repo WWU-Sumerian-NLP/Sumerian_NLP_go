@@ -1,6 +1,11 @@
 relationType    	subjectTag  	objectTag   	regexRules  	tags
-person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL	ANIM, PN, DEL
-person:receives_animal  	PN   	ANIM   	ANIM [O\s?]*PN [O\s?]*REC	ANIM, PN, REC
-person:has_son	PN_1	PN_2	PN [O\s?]*SON PN	PN_1, SON, PN_2
-person_delivers:person_recieves	PN_1	PN_2	PN O ANIM PN DEL O REC	PN_1, DEL, PN_2
-person_delivers:person_recieves	PN_1	PN_2	ANIM [O\s?]*DEL FN [O\s?]*O PN REC	PN_1, DEL, PN_2
+person:delivers_animal  	PN  	ANIM    	ANIM [O\s?]*PN [O\s?]*DEL	"ANIM, PN, DEL"
+person:receives_animal  	ANIM   	PN   	ANIM [O\s?]*PN [O\s?]*REC	"ANIM, PN, REC"
+person:has_son	PN_1	PN_2	PN [O\s?]*SON PN	"PN_1, SON, PN_2"
+person_delivers:person_recieves	PN_1	PN_2	PN O ANIM PN DEL O REC	"PN_1, DEL, PN_2"
+person_delivers:person_recieves	PN_1	PN_2	ANIM [O\s?]*DEL FN [O\s?]*O PN REC	"PN_1, DEL, PN_2"
+person:is_king	PN	PN	PN [O\s?]*DN	"PN, O, DN"
+person:is_king	PN	PN	[O\s?]*DN PN	"O, DN, PN"
+person:has_wife	PN_1	PN_2	PN [O\s?]*WIFE [O\s?]*PN 	"PN_1, WIFE, PN_2"
+person:has_wife	PN_1	PN_2	PN [O\s?]*PN WIFE 	"PN_1, WIFE, PN_2"
+person:has_father	PN_1	PN_2	PN [O\s?]*FATHER PN	"PN_1, FATHER, PN_2"

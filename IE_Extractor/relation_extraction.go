@@ -12,18 +12,18 @@ const findInnerParenthesis = `\([^DU(,)]*\)|\[[^\]]*\]g` //regex gets inner para
 
 type RelationExtractorRB struct {
 	in               <-chan TaggedTransliterations
-	out              chan RelationData
+	Out              chan RelationData
 	done             chan struct{}
 	regexRuleList    []string
 	re               *regexp.Regexp
 	re2              *regexp.Regexp
-	relationDataList []RelationData
+	RelationDataList []RelationData
 }
 
-func newRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractorRB {
+func NewRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractorRB {
 	relationExtractor := &RelationExtractorRB{
 		in:            in,
-		out:           make(chan RelationData, 1000000),
+		Out:           make(chan RelationData, 10000000),
 		regexRuleList: make([]string, 0),
 		done:          make(chan struct{}, 1),
 	}
@@ -33,7 +33,7 @@ func newRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractor
 	relationExtractor.re = re
 	relationExtractor.re2 = re_2
 
-	relationExtractor.relationDataList = readRelationTypesCsv("tests/relation_input.tsv")
+	relationExtractor.RelationDataList = readRelationTypesCsv("tests/relation_input.tsv")
 	relationExtractor.run()
 	return relationExtractor
 }
@@ -49,7 +49,7 @@ func (r *RelationExtractorRB) run() {
 		println("relation extraction")
 		defer wg.Done()
 		for cdliData := range r.in {
-			for _, relationData := range r.relationDataList { //read through relation_input.csv
+			for _, relationData := range r.RelationDataList { //read through relation_input.csv
 				relationData.tabletNum = cdliData.TabletNum
 				relationData.providence = cdliData.Providence
 				relationData.period = cdliData.Period
@@ -61,13 +61,13 @@ func (r *RelationExtractorRB) run() {
 					relationTuple := relationData.getRelationTuple(strings.Split(relationData.tags, ","), extractedRelationTuple)
 					fmt.Printf("relationData.relationTuple: %v\n", relationData.relationTuple)
 					relationData.relationTuple = relationTuple
-					r.out <- relationData
+					r.Out <- relationData
 
 				}
 			}
 		}
 		println("DONE")
-		close(r.out)
+		close(r.Out)
 	}()
 	wg.Wait()
 }

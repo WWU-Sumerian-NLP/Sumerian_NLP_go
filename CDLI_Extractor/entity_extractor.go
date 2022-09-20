@@ -20,7 +20,7 @@ type CDLIEntityExtractor struct {
 func newCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 	entityExtractor := &CDLIEntityExtractor{
 		in:   in,
-		out:  make(chan CDLIData, 1000000),
+		out:  make(chan CDLIData, 100000000),
 		done: make(chan struct{}, 1),
 		nerList: []string{"city_ner.csv", "months_ner.csv", "royalname_ner.csv", "governors_ner.csv", "people_ner.csv", "animals_ner.csv", "foreigners_ner.csv",
 			"agricultural_locus_ner.csv", "ancestral_clan_line_ner.csv", "celestial_ner.csv", "city_quarter_ner.csv", "divine_ner.csv", "ethnos_ner.csv", "field_ner.csv",

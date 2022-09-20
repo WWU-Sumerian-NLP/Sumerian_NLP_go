@@ -2,7 +2,7 @@ package CDLI_Extractor
 
 //runPipeline will run entire pipeline
 func runPipeline(path, destPath string) {
-	atfParser := newATFParser(path)
+	atfParser := NewATFParser(path)
 	transliterationCleaner := newTransliterationCleaner(false, atfParser.out)
 	atfNormalizer := newATFNormalizer(false, transliterationCleaner.out)
 	entityExtractor := newCDLIEntityExtractor(atfNormalizer.out)
@@ -19,7 +19,7 @@ func runPipeline(path, destPath string) {
 }
 
 func runCDLIParserPipeline(path, destPath string) {
-	atfParser := newATFParser(path)
+	atfParser := NewATFParser(path)
 	dataWriter := newDataWriter(destPath, atfParser.out)
 
 	go func() {

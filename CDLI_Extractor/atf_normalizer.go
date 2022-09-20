@@ -20,7 +20,7 @@ func newATFNormalizer(normalizeDefective bool, in <-chan CDLIData) *ATFNormalize
 	atfNormalizer := &ATFNormalizer{
 		normalizeDefective: false,
 		in:                 in,
-		out:                make(chan CDLIData, 100000),
+		out:                make(chan CDLIData, 10000000),
 		done:               make(chan struct{}, 1),
 	}
 	atfNormalizer.run()

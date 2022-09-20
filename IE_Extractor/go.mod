@@ -1,4 +1,4 @@
-module IE_Extractor
+module github.com/HGuzman-Soto/IE_Extractor
 
 go 1.17
 

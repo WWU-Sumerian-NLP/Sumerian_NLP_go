@@ -1,356 +1,357 @@
 tablet_num	relation_type	subject	object	providence	period	dates_referenced	subject_tag	object_tag
-P142788	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.--.15 (us2 year)"	PN	ANIM
-P142790	person:delivers_animal  	szesz-kal-la	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.42.11.19"	PN	ANIM
-P249019	person:receives_animal  	ur-{d}suen	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Ibbi-Suen.02.05.00"	PN	ANIM
-P330393	person:delivers_animal  	szar-ru-um-ba-ni	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" --.--.--.--"	PN	ANIM
-P330633	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem) ?"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.08.08.23"	PN	ANIM
-P100211	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.09.00"	PN	ANIM
-P100214	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.11.19"	PN	ANIM
-P100265	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.08"	PN	ANIM
-P145528	person:delivers_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.10.23"	PN	ANIM
-P145526	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.04.00 (us2 year)"	PN	ANIM
-P100337	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.08.00"	PN	ANIM
-P123489	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.07.03 (us2 year)"	PN	ANIM
-P100972	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.04.18"	PN	ANIM
-P429942	person:delivers_animal  	szu-ru-usz-ki-in	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.04.00"	PN	ANIM
-P101413	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.00.00 (us2 year)"	PN	ANIM
-P101416	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.04.10 (us2 year)"	PN	ANIM
-P101434	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.08.05.00"	PN	ANIM
-P101445	person:delivers_animal  	e2-a-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.21"	PN	ANIM
-P101770	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.08.09 (us2 year)"	PN	ANIM
-P465833	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.10.14"	PN	ANIM
-P102188	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.12.19"	PN	ANIM
-P102343	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.02.29"	PN	ANIM
-P102446	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.07.05"	PN	ANIM
-P330239	person:delivers_animal  	lu2-bala-sa6-ga	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.12.28 (us2 year)"	PN	ANIM
-P102699	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.09.00 (us2 year)"	PN	ANIM
-P102703	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.06.21"	PN	ANIM
-P102820	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.10.04"	PN	ANIM
-P103087	person:receives_animal  	lu2-bala-sa6-ga	{ansze}kunga2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.08.01.28"	PN	ANIM
-P103304	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.06.00"	PN	ANIM
-P103346	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.12.00"	PN	ANIM
-P103463	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.09.22"	PN	ANIM
-P103475	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.04.00"	PN	ANIM
-P103533	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.06.23"	PN	ANIM
-P103788	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.10m.13 (intercalated)"	PN	ANIM
-P103859	person:delivers_animal  	zabar-dab5	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.00.00"	PN	ANIM
-P104014	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.03.20"	PN	ANIM
-P104032	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.10.16"	PN	ANIM
-P104069	person:delivers_animal  	lugal-nir-gal2	masz-da3	" Puzriš-Dagan (mod. Drehem) ?"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.07.00 (us2 year)"	PN	ANIM
-P104436	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.09.00"	PN	ANIM
-P104476	person:has_son	szesz-kal-la	ur-nigar	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.01.02.08"	PN_1	PN_2
-P464281	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.08.06.13"	PN	ANIM
-P104761	person:delivers_animal  	szu-ru-usz-ki-in	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.00"	PN	ANIM
-P105105	person:delivers_animal  	zabar-dab5	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.03.18 (us2 year)"	PN	ANIM
-P105140	person:delivers_animal  	zabar-dab5	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.11.00, Šulgi.48.12.00"	PN	ANIM
-P105815	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.02.00"	PN	ANIM
-P105851	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.01.23"	PN	ANIM
-P106117	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.--.08.22"	PN	ANIM
-P106176	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.06.18"	PN	ANIM
-P106312	person:has_son	lu2-{d}nanna	ur-nigar{gar}	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.05.02 (us2 year)"	PN_1	PN_2
-P106328	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.05.02"	PN	ANIM
-P106375	person:delivers_animal  	lu2-bala-sa6-ga	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.05.03.17 (us2 year)"	PN	ANIM
-P106412	person:delivers_animal  	nir-i3-da-gal2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.09.25"	PN	ANIM
-P106857	person_delivers:person_recieves	{ansze}kunga2	lugal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.07.04"	PN_1	PN_2
-P210103	person:delivers_animal  	ur-nigar	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.39.05.00"	PN	ANIM
-P210104	person:receives_animal  	nir-i3-da-gal2	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.09.11.05"	PN	ANIM
-P390863	person:delivers_animal  	szar-ru-um-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.08.08.09"	PN	ANIM
-P210313	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.03.01"	PN	ANIM
-P211342	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.07.22"	PN	ANIM
-P390996	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.02.-- (us2 year)"	PN	ANIM
-P303426	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.08.02.25"	PN	ANIM
-P303446	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.06.03 (us2-us2 year)"	PN	ANIM
-P303471	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.01.10"	PN	ANIM
-P303481	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.23"	PN	ANIM
-P303488	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.04.28"	PN	ANIM
-P303494	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.14 (us2 year)"	PN	ANIM
-P303500	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.10.30"	PN	ANIM
-P303504	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.08.17"	PN	ANIM
-P303507	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.08.10.00"	PN	ANIM
-P303539	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.06.13"	PN	ANIM
-P303551	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.11.06 (us2 year)"	PN	ANIM
-P303563	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.05.18"	PN	ANIM
-P303570	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.11.00, Amar-Suen.02.11.11 ?"	PN	ANIM
-P303571	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.10.13"	PN	ANIM
-P303579	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.08.18"	PN	ANIM
-P303584	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.00.00 ?"	PN	ANIM
-P303622	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.13"	PN	ANIM
-P303665	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.06.18"	PN	ANIM
-P303729	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.42.00.00"	PN	ANIM
-P303768	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.11.01"	PN	ANIM
-P303777	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.06.13"	PN	ANIM
-P303785	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.05m.30 (intercalated) =? Šulgi.45.05.30 (intercalated?)"	PN	ANIM
-P303788	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.04.05"	PN	ANIM
-P303799	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.03.17"	PN	ANIM
-P416468	person:delivers_animal  	lugal-nir-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.05.00"	PN	ANIM
-P416457	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.04m.20 (intercalated) =? Šulgi.45.04.20 (intercalated?)"	PN	ANIM
-P107577	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.04m.26 (intercalated) =? Šulgi.45.04.26 (intercalated?)"	PN	ANIM
-P107595	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.01.18 (us2 year)"	PN	ANIM
-P107599	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.08.01"	PN	ANIM
-P107618	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.04.25"	PN	ANIM
-P107655	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.10.29"	PN	ANIM
-P107666	person:delivers_animal  	ur-{d}suen	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.28"	PN	ANIM
-P107672	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.01.18 (us2 year)"	PN	ANIM
-P107673	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.01 (us2 year)"	PN	ANIM
-P107675	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.16 (us2 year)"	PN	ANIM
-P107683	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.04.27 (us2 year)"	PN	ANIM
-P107698	person:delivers_animal  	e2-a-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.10.10 (us2 year)"	PN	ANIM
-P107709	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.06.25"	PN	ANIM
-P107712	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.07.20"	PN	ANIM
-P107722	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.10.02"	PN	ANIM
-P107725	person:delivers_animal  	e2-a-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.10.23"	PN	ANIM
-P107727	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.11.20"	PN	ANIM
-P107739	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.04.19"	PN	ANIM
-P107744	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.06.11"	PN	ANIM
-P107757	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.28"	PN	ANIM
-P107758	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.12.02"	PN	ANIM
-P107764	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.03.04"	PN	ANIM
-P107779	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.01.18"	PN	ANIM
-P107781	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.03.02"	PN	ANIM
-P107782	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.03.14"	PN	ANIM
-P107843	person:delivers_animal  	lu2-bala-sa6-ga	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.08.18"	PN	ANIM
-P107988	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.09.00"	PN	ANIM
-P107990	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.09.02"	PN	ANIM
-P108004	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.02.02 (us2 year)"	PN	ANIM
-P108007	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.02.21 (us2 year)"	PN	ANIM
-P108008	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.03 (us2 year)"	PN	ANIM
-P108011	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.04.20 (us2 year)"	PN	ANIM
-P108014	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.05.02"	PN	ANIM
-P108028	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" --.--.02.03"	PN	ANIM
-P108029	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" 00.00.00.03"	PN	ANIM
-P108671	person:has_son	lu2-{d}nanna	ur-nigar{gar}	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.02.03, Amar-Suen.06.02.26"	PN_1	PN_2
-P452242	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.32.05.00"	PN	ANIM
-P142903	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.00"	PN	ANIM
-P212135	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.06.27"	PN	ANIM
-P211676	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.04"	PN	ANIM
-P211683	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.06.23"	PN	ANIM
-P212101	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.01"	PN	ANIM
-P212102	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.04.21"	PN	ANIM
-P212096	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.09.07"	PN	ANIM
-P212061	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.12.00"	PN	ANIM
-P109494	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.02.15"	PN	ANIM
-P109496	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.01m.06 (intercalated), Šulgi.44.05m.06 (intercalated) =? Šulgi.45.01.00, Šulgi.45.05.00"	PN	ANIM
-P109515	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.12.12"	PN	ANIM
-P109520	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.17 (us2 year)"	PN	ANIM
-P109523	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.27"	PN	ANIM
-P109525	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.05.30"	PN	ANIM
-P109531	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.01.18 (us2 year)"	PN	ANIM
-P109538	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.04.00 (us2 year)"	PN	ANIM
-P109543	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.05m.08 (intercalated) (us2 year) =? Šulgi.45.05.08 (intercalated?)"	PN	ANIM
-P109547	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.09.14 (us2 year)"	PN	ANIM
-P109549	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.10.12 (us2 year)"	PN	ANIM
-P109568	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.05"	PN	ANIM
-P235893	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.08.04.23 ?"	PN	ANIM
-P406885	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.12.27"	PN	ANIM
-P406899	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.02.25"	PN	ANIM
-P406908	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.10.25"	PN	ANIM
-P407199	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.04.04"	PN	ANIM
-P408002	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.05.23"	PN	ANIM
-P112092	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.09.00"	PN	ANIM
-P112244	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.08.18"	PN	ANIM
-P112250	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.01.23"	PN	ANIM
-P145798	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.--.15"	PN	ANIM
-P145799	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.09.11"	PN	ANIM
-P112418	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.22 (us2 year)"	PN	ANIM
-P389836	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.01.00"	PN	ANIM
-P389934	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.03.05"	PN	ANIM
-P390071	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" 00.00.00.29"	PN	ANIM
-P390128	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.10.07"	PN	ANIM
-P390167	person:delivers_animal  	ur-{d}suen	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.07.12.14"	PN	ANIM
-P390234	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.01.00, Amar-Suen.05.12.00"	PN	ANIM
-P390252	person:delivers_animal  	szar-ru-um-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.09.06.13"	PN	ANIM
-P390255	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.09.06.11"	PN	ANIM
-P390296	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.10.--"	PN	ANIM
-P113156	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.08.17"	PN	ANIM
-P113158	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.06.05"	PN	ANIM
-P113173	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.06.00"	PN	ANIM
-P113595	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.01.27"	PN	ANIM
-P113624	person:delivers_animal  	nu-i3-da	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.04.28"	PN	ANIM
-P113625	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.06.20"	PN	ANIM
-P114071	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.01.00"	PN	ANIM
-P114327	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.07.04"	PN	ANIM
-P115392	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.12d.28 (intercalated)"	PN	ANIM
-P115531	person:delivers_animal  	lugal-nir-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.05.12"	PN	ANIM
-P115532	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.06.09"	PN	ANIM
-P115604	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.00.00.00"	PN	ANIM
-P115902	person:delivers_animal  	nu-i3-da	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.09.18"	PN	ANIM
-P116158	person:delivers_animal  	ur-{d}suen	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.04.26"	PN	ANIM
-P116169	person:delivers_animal  	szu-ru-usz-ki-in	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.06.05.00"	PN	ANIM
-P116213	person:delivers_animal  	ur-nigar	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.11.00"	PN	ANIM
-P116822	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.03.18"	PN	ANIM
-P116826	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.01.04 (us2 year)"	PN	ANIM
-P116832	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.08.04"	PN	ANIM
-P116834	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.03.24"	PN	ANIM
-P117287	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.09.00"	PN	ANIM
-P117289	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.06.30 (us2 year)"	PN	ANIM
-P117594	person:delivers_animal  	szar-ru-um-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.01.24"	PN	ANIM
-P117643	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.35.06.00 (us2 year)"	PN	ANIM
-P118299	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.01.29"	PN	ANIM
-P118573	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.33.07.00 (us2 year)"	PN	ANIM
-P118596	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.28 (us2 year) ?"	PN	ANIM
-P118597	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.12.02"	PN	ANIM
-P118602	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.03.23"	PN	ANIM
-P118604	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.08.00"	PN	ANIM
-P143108	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.09.00"	PN	ANIM
-P121508	person:delivers_animal  	lugal-ma2-gur8-re	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.01.28"	PN	ANIM
-P122160	person:delivers_animal  	ur-nigar	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.08.00"	PN	ANIM
-P122169	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.02.03"	PN	ANIM
-P122193	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.07.13"	PN	ANIM
-P320552	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.06.00"	PN	ANIM
-P320571	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.06.21"	PN	ANIM
-P320583	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.10.19"	PN	ANIM
-P320586	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.11.15"	PN	ANIM
-P320597	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.07.24"	PN	ANIM
-P320612	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.10.27"	PN	ANIM
-P320656	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.03.14"	PN	ANIM
-P320824	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.09.21"	PN	ANIM
-P320868	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.05.03.04 (us2 year)"	PN	ANIM
-P320911	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.07.18 (us2 year)"	PN	ANIM
-P320992	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.11d.14 (intercalated)"	PN	ANIM
-P332350	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.06.13"	PN	ANIM
-P332351	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.06.29"	PN	ANIM
-P332356	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.06.00"	PN	ANIM
-P332369	person:delivers_animal  	lugal-ma2-gur8-re	masz2	" Puzriš-Dagan (mod. Drehem) ?"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.07.00"	PN	ANIM
-P453103	person:has_son	lu2-{d}nanna	ur-nigar{gar}	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.05.08"	PN_1	PN_2
-P342109	person:delivers_animal  	lugal-nir-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.01.00 (us2 year)"	PN	ANIM
-P507968	person:delivers_animal  	ur-{d}suen	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.04.00"	PN	ANIM
-P122541	person:delivers_animal  	szesz-kal-la	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.03.07"	PN	ANIM
-P122565	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.01"	PN	ANIM
-P122665	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.05.14"	PN	ANIM
-P122666	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.10.06"	PN	ANIM
-P122705	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.20"	PN	ANIM
-P123393	person:delivers_animal  	ur-{d}suen	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.06.12"	PN	ANIM
-P123528	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.11.24"	PN	ANIM
-P123456	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.02.01"	PN	ANIM
-P123594	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.10.22"	PN	ANIM
-P123520	person:delivers_animal  	ur-{d}suen	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.16"	PN	ANIM
-P123439	person:delivers_animal  	szar-ru-um-i3-li2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.17"	PN	ANIM
-P123626	person:delivers_animal  	lugal-nir-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.05.26 (us2 year)"	PN	ANIM
-P123422	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.06.18 (us2 year)"	PN	ANIM
-P123590	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.01.00 (us2 year)"	PN	ANIM
-P123442	person:delivers_animal  	ur-{d}suen	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.05.11 (us2 year)"	PN	ANIM
-P123469	person:delivers_animal  	id-da-a	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.05.15 (us2 year)"	PN	ANIM
-P123286	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.06.27"	PN	ANIM
-P123401	person:delivers_animal  	e2-a-i3-li2	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.--.06.00"	PN	ANIM
-P123577	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.05.00"	PN	ANIM
-P123501	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.09.17"	PN	ANIM
-P123631	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.10.16"	PN	ANIM
-P123676	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.11.15"	PN	ANIM
-P123567	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.10.28"	PN	ANIM
-P123709	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.02.00"	PN	ANIM
-P123257	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.09.21"	PN	ANIM
-P123505	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.24"	PN	ANIM
-P123436	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.08.05 (us2 year)"	PN	ANIM
-P123640	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.11.10 (us2 year)"	PN	ANIM
-P123395	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.01.20 (us2 year)"	PN	ANIM
-P123400	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.10.30"	PN	ANIM
-P123639	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.02.19 (us2 year)"	PN	ANIM
-P123736	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.08.03"	PN	ANIM
-P123741	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.02.00"	PN	ANIM
-P123768	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.11.19"	PN	ANIM
-P123810	person:delivers_animal  	szu-ru-usz-ki-in	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.03.05"	PN	ANIM
-P123831	person:delivers_animal  	id-da-a	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.12.28"	PN	ANIM
-P124166	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.02.09"	PN	ANIM
-P124169	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.05.17"	PN	ANIM
-P124210	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.04.02"	PN	ANIM
-P123194	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.05.11.08"	PN	ANIM
-P124431	person:delivers_animal  	nir-i3-da-gal2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.04.16"	PN	ANIM
-P124478	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.09.23"	PN	ANIM
-P124531	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.01.01 (us2 year)"	PN	ANIM
-P124532	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.03.07"	PN	ANIM
-P124543	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.07.03.27"	PN	ANIM
-P414583	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.05.00"	PN	ANIM
-P124645	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.08.25"	PN	ANIM
-P124663	person:delivers_animal  	nir-i3-da-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.03.00"	PN	ANIM
-P424387	person:delivers_animal  	szesz-kal-la	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.04.00"	PN	ANIM
-P124857	person:delivers_animal  	ur-{d}suen	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.11.29 (us2 year)"	PN	ANIM
-P124858	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.06.26"	PN	ANIM
-P125425	person:delivers_animal  	id-da-a	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.01.04"	PN	ANIM
-P125435	person:delivers_animal  	szar-ru-um-ba-ni	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.08.25"	PN	ANIM
-P125475	person:delivers_animal  	ARAD2-mu	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.12.15"	PN	ANIM
-P125508	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.10.18"	PN	ANIM
-P125630	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.11.23, Šulgi.48.11.29"	PN	ANIM
-P125662	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.05.00"	PN	ANIM
-P125817	person:receives_animal  	ur-nigar{gar}	gu4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.07.01.00, Šū-Suen.07.03.00, Šū-Suen.07.08.00, Šū-Suen.07.09.00, Šū-Suen.07.12.00"	PN	ANIM
-P125842	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.11.00"	PN	ANIM
-P125862	person:receives_animal  	lu2-bala-sa6-ga	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.08.01.00, Šū-Suen.08.12.00"	PN	ANIM
-P125996	person:receives_animal  	szesz-kal-la	{ansze}kunga2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.12.00"	PN	ANIM
-P126335	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.05.23"	PN	ANIM
-P126368	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.35.05.00 (us2 year)"	PN	ANIM
-P126368	person_delivers:person_recieves	ARAD2-mu	ur-{d}en-lil2-la2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.35.05.00 (us2 year)"	PN_1	PN_2
-P126396	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.00.00.06"	PN	ANIM
-P126400	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" --.--.--.--"	PN	ANIM
-P126423	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.11.13 (us2 year)"	PN	ANIM
-P126424	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.05.25"	PN	ANIM
-P126458	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.12.27"	PN	ANIM
-P126474	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.08.19"	PN	ANIM
-P126492	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.01.09 (us2 year)"	PN	ANIM
-P126497	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.07.25"	PN	ANIM
-P126514	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.05.20"	PN	ANIM
-P126560	person:delivers_animal  	id-da-a	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" --.--.04.11"	PN	ANIM
-P126582	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.11.26"	PN	ANIM
-P126586	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.02.09m.00 (intercalated)"	PN	ANIM
-P126628	person:has_son	szesz-kal-la	ur-{d}en-lil2-la2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" 00.00.00.00"	PN_1	PN_2
-P332040	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.12.00"	PN	ANIM
-P126706	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.04.04.09 (us2 year)"	PN	ANIM
-P126797	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.00.00"	PN	ANIM
-P126808	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.07.24"	PN	ANIM
-P201414	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.01.02.29"	PN	ANIM
-P127377	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.01.00"	PN	ANIM
-P127839	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Ibbi-Suen.01.12d.00 (intercalated)"	PN	ANIM
-P128615	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.27"	PN	ANIM
-P128611	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.07.10"	PN	ANIM
-P128763	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.27"	PN	ANIM
-P128826	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.01.02 (us2-us2 year)"	PN	ANIM
-P128829	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.08.16"	PN	ANIM
-P128831	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.12.04"	PN	ANIM
-P128834	person:receives_animal  	ur-nigar{gar}	az	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.07.26"	PN	ANIM
-P128836	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.03.19"	PN	ANIM
-P128837	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.12.20"	PN	ANIM
-P218092	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.01.24"	PN	ANIM
-P143517	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.06.00"	PN	ANIM
-P143656	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.04.00 (us2 year)"	PN	ANIM
-P144366	person:delivers_animal  	szesz-kal-la	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.09.01.00, Amar-Suen.09.05.00"	PN	ANIM
-P129411	person:delivers_animal  	e2-a-i3-li2	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.45.09.02"	PN	ANIM
-P129418	person:delivers_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.02.04"	PN	ANIM
-P129441	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.06.10.28"	PN	ANIM
-P130510	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.04.23"	PN	ANIM
-P131871	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.09m.16 (intercalated)"	PN	ANIM
-P131878	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.12.08 (us2 year)"	PN	ANIM
-P131894	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.03.00"	PN	ANIM
-P131940	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.06.00"	PN	ANIM
-P131944	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.09.03"	PN	ANIM
-P131957	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.43.09.00"	PN	ANIM
-P131974	person:delivers_animal  	nu-i3-da	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.05.11"	PN	ANIM
-P131995	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.48.07.24"	PN	ANIM
-P132001	person:delivers_animal  	lu2-{d}nanna	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.38.12.00 (us2 year)"	PN	ANIM
-P132011	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.12.04"	PN	ANIM
-P132046	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.10.29"	PN	ANIM
-P132075	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.03.13"	PN	ANIM
-P132076	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.03.00"	PN	ANIM
-P132112	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.10.21"	PN	ANIM
-P132129	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.10.00"	PN	ANIM
-P133838	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.01.23 (us2 year)"	PN	ANIM
-P133937	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.23"	PN	ANIM
-P133943	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.10.04 (us2 year)"	PN	ANIM
-P133945	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.27.07.22"	PN	ANIM
-P133949	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.02.08"	PN	ANIM
-P133952	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.07.12"	PN	ANIM
-P133953	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.09.21"	PN	ANIM
-P133956	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.03.01.09"	PN	ANIM
-P133973	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šū-Suen.03.04.04 (us2 year)"	PN	ANIM
-P500197	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.08.08"	PN	ANIM
-P134268	person:receives_animal  	ur-nigar{gar}	masz-da3	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.07.08 (us2 year)"	PN	ANIM
-P134795	person:delivers_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.05.25 (us2 year)"	PN	ANIM
-P134797	person:delivers_animal  	lu2-{d}nanna	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.46.11.27"	PN	ANIM
-P134798	person:delivers_animal  	id-da-a	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.05.00"	PN	ANIM
-P134883	person:delivers_animal  	lugal-nir-gal2	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.08.00"	PN	ANIM
-P134887	person:delivers_animal  	ur-{d}suen	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.06.10"	PN	ANIM
-P134975	person:receives_animal  	ur-nigar{gar}	gukkal	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.47.08.11 (us2 year)"	PN	ANIM
-P134978	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.01.04.09"	PN	ANIM
-P134983	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.02.12.04"	PN	ANIM
-P136059	person:receives_animal  	ur-nigar{gar}	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.05.07.02"	PN	ANIM
-P136060	person:delivers_animal  	szar-ru-um-ba-ni	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.07.04.13"	PN	ANIM
-P136070	person:receives_animal  	ur-nigar{gar}	masz2	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.44.11.00"	PN	ANIM
-P235549	person:delivers_animal  	ARAD2-mu	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Šulgi.42.00.00"	PN	ANIM
-P200579	person:delivers_animal  	ur-{d}suen	sila4	" Puzriš-Dagan (mod. Drehem)"	" Ur III (ca. 2100-2000 BC)"	" Amar-Suen.04.05.03"	PN	ANIM
+P142788	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.--.15 (us2 year)	PN	ANIM
+P142790	person:delivers_animal  	szesz-kal-la	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.42.11.19	PN	ANIM
+P249019	person:receives_animal  	masz2	ur-{d}suen	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Ibbi-Suen.02.05.00	ANIM	PN
+P330393	person:delivers_animal  	szar-ru-um-ba-ni	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 --.--.--.--	PN	ANIM
+P330633	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem) ?	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.08.08.23	PN	ANIM
+P100211	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.09.00	ANIM	PN
+P100214	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.11.19	PN	ANIM
+P100265	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.08	ANIM	PN
+P145528	person:delivers_animal  	ur-nigar{gar}	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.10.23	PN	ANIM
+P145526	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.04.00 (us2 year)	PN	ANIM
+P100337	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.08.00	ANIM	PN
+P123489	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.07.03 (us2 year)	PN	ANIM
+P100972	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.04.18	PN	ANIM
+P429942	person:delivers_animal  	szu-ru-usz-ki-in	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.04.00	PN	ANIM
+P101413	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.00.00 (us2 year)	ANIM	PN
+P101416	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.04.10 (us2 year)	ANIM	PN
+P101434	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.08.05.00	ANIM	PN
+P101445	person:delivers_animal  	e2-a-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.21	PN	ANIM
+P101770	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.08.09 (us2 year)	ANIM	PN
+P465833	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.10.14	PN	ANIM
+P102188	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.12.19	ANIM	PN
+P102343	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.02.29	PN	ANIM
+P102446	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.07.05	ANIM	PN
+P330239	person:delivers_animal  	lu2-bala-sa6-ga	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.12.28 (us2 year)	PN	ANIM
+P102699	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.09.00 (us2 year)	ANIM	PN
+P102703	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.06.21	ANIM	PN
+P102820	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.10.04	ANIM	PN
+P103087	person:receives_animal  	{ansze}kunga2	lu2-bala-sa6-ga	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.08.01.28	ANIM	PN
+P103304	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.06.00	ANIM	PN
+P103346	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.12.00	ANIM	PN
+P103463	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.09.22	ANIM	PN
+P103475	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.04.00	ANIM	PN
+P103533	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.06.23	ANIM	PN
+P103788	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.10m.13 (intercalated)	ANIM	PN
+P103859	person:delivers_animal  	zabar-dab5	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.00.00	PN	ANIM
+P104014	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.03.20	ANIM	PN
+P104032	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.10.16	PN	ANIM
+P104069	person:delivers_animal  	lugal-nir-gal2	masz-da3	 Puzriš-Dagan (mod. Drehem) ?	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.07.00 (us2 year)	PN	ANIM
+P104436	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.09.00	PN	ANIM
+P104476	person:has_son	szesz-kal-la	ur-nigar	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.01.02.08	PN_1	PN_2
+P464281	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.08.06.13	ANIM	PN
+P104761	person:delivers_animal  	szu-ru-usz-ki-in	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.00	PN	ANIM
+P105105	person:delivers_animal  	zabar-dab5	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.03.18 (us2 year)	PN	ANIM
+P105140	person:delivers_animal  	zabar-dab5	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šulgi.48.11.00, Šulgi.48.12.00"	PN	ANIM
+P105815	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.02.00	ANIM	PN
+P105851	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.01.23	ANIM	PN
+P106117	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.--.08.22	PN	ANIM
+P106176	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.06.18	ANIM	PN
+P106312	person:has_son	lu2-{d}nanna	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.05.02 (us2 year)	PN_1	PN_2
+P106328	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.05.02	ANIM	PN
+P106375	person:delivers_animal  	lu2-bala-sa6-ga	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.05.03.17 (us2 year)	PN	ANIM
+P106412	person:delivers_animal  	nir-i3-da-gal2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.09.25	PN	ANIM
+P106857	person_delivers:person_recieves	{ansze}kunga2	lugal	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.07.04	PN_1	PN_2
+P210103	person:delivers_animal  	ur-nigar	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.39.05.00	PN	ANIM
+P210104	person:receives_animal  	masz2	nir-i3-da-gal2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.09.11.05	ANIM	PN
+P390863	person:delivers_animal  	szar-ru-um-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.08.08.09	PN	ANIM
+P210313	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.03.01	ANIM	PN
+P211342	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.07.22	PN	ANIM
+P390996	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.02.-- (us2 year)	ANIM	PN
+P303426	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.08.02.25	ANIM	PN
+P303446	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.06.03 (us2-us2 year)	ANIM	PN
+P303471	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.01.10	ANIM	PN
+P303481	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.23	ANIM	PN
+P303488	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.04.28	ANIM	PN
+P303494	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.14 (us2 year)	ANIM	PN
+P303500	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.10.30	ANIM	PN
+P303504	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.08.17	ANIM	PN
+P303507	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.08.10.00	ANIM	PN
+P303539	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.06.13	ANIM	PN
+P303551	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.11.06 (us2 year)	ANIM	PN
+P303563	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.05.18	ANIM	PN
+P303570	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šulgi.45.11.00, Amar-Suen.02.11.11 ?"	ANIM	PN
+P303571	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.10.13	ANIM	PN
+P303579	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.08.18	ANIM	PN
+P303584	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.00.00 ?	ANIM	PN
+P303622	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.13	ANIM	PN
+P303665	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.06.18	ANIM	PN
+P303729	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.42.00.00	ANIM	PN
+P303768	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.11.01	ANIM	PN
+P303777	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.06.13	ANIM	PN
+P303785	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.05m.30 (intercalated) =? Šulgi.45.05.30 (intercalated?)	ANIM	PN
+P303788	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.04.05	ANIM	PN
+P303799	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.03.17	ANIM	PN
+P416468	person:delivers_animal  	lugal-nir-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.05.00	PN	ANIM
+P416457	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.04m.20 (intercalated) =? Šulgi.45.04.20 (intercalated?)	ANIM	PN
+P107577	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.04m.26 (intercalated) =? Šulgi.45.04.26 (intercalated?)	ANIM	PN
+P107595	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.01.18 (us2 year)	ANIM	PN
+P107599	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.08.01	ANIM	PN
+P107618	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.04.25	ANIM	PN
+P107655	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.10.29	ANIM	PN
+P107666	person:delivers_animal  	ur-{d}suen	az	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.28	PN	ANIM
+P107672	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.01.18 (us2 year)	ANIM	PN
+P107673	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.01 (us2 year)	ANIM	PN
+P107675	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.16 (us2 year)	ANIM	PN
+P107683	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.04.27 (us2 year)	ANIM	PN
+P107698	person:delivers_animal  	e2-a-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.10.10 (us2 year)	PN	ANIM
+P107709	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.06.25	ANIM	PN
+P107712	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.07.20	ANIM	PN
+P107722	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.10.02	ANIM	PN
+P107725	person:delivers_animal  	e2-a-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.10.23	PN	ANIM
+P107727	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.11.20	ANIM	PN
+P107739	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.04.19	ANIM	PN
+P107744	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.06.11	ANIM	PN
+P107757	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.28	ANIM	PN
+P107758	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.12.02	ANIM	PN
+P107764	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.03.04	ANIM	PN
+P107779	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.01.18	ANIM	PN
+P107781	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.03.02	ANIM	PN
+P107782	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.03.14	ANIM	PN
+P107843	person:delivers_animal  	lu2-bala-sa6-ga	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.08.18	PN	ANIM
+P107988	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.09.00	ANIM	PN
+P107990	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.09.02	ANIM	PN
+P108004	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.02.02 (us2 year)	ANIM	PN
+P108007	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.02.21 (us2 year)	ANIM	PN
+P108008	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.03 (us2 year)	ANIM	PN
+P108011	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.04.20 (us2 year)	ANIM	PN
+P108014	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.05.02	ANIM	PN
+P108028	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 --.--.02.03	ANIM	PN
+P108029	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 00.00.00.03	ANIM	PN
+P108671	person:has_son	lu2-{d}nanna	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Amar-Suen.06.02.03, Amar-Suen.06.02.26"	PN_1	PN_2
+P452242	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.32.05.00	ANIM	PN
+P142903	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.00	ANIM	PN
+P212135	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.06.27	ANIM	PN
+P211676	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.04	PN	ANIM
+P211683	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.06.23	ANIM	PN
+P212101	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.01	ANIM	PN
+P212102	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.04.21	ANIM	PN
+P212096	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.09.07	ANIM	PN
+P212061	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.12.00	ANIM	PN
+P109494	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.02.15	ANIM	PN
+P109496	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šulgi.44.01m.06 (intercalated), Šulgi.44.05m.06 (intercalated) =? Šulgi.45.01.00, Šulgi.45.05.00"	ANIM	PN
+P109515	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.12.12	ANIM	PN
+P109520	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.17 (us2 year)	ANIM	PN
+P109523	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.27	ANIM	PN
+P109525	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.05.30	ANIM	PN
+P109531	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.01.18 (us2 year)	ANIM	PN
+P109538	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.04.00 (us2 year)	ANIM	PN
+P109543	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.05m.08 (intercalated) (us2 year) =? Šulgi.45.05.08 (intercalated?)	ANIM	PN
+P109547	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.09.14 (us2 year)	ANIM	PN
+P109549	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.10.12 (us2 year)	ANIM	PN
+P109568	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.05	ANIM	PN
+P235893	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.08.04.23 ?	PN	ANIM
+P406885	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.12.27	ANIM	PN
+P406899	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.02.25	ANIM	PN
+P406908	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.10.25	ANIM	PN
+P407199	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.04.04	PN	ANIM
+P408002	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.05.23	ANIM	PN
+P112092	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.09.00	PN	ANIM
+P112244	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.08.18	ANIM	PN
+P112250	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.01.23	ANIM	PN
+P145798	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.--.15	ANIM	PN
+P145799	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.09.11	ANIM	PN
+P112418	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.22 (us2 year)	ANIM	PN
+P389836	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.01.00	ANIM	PN
+P389934	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.03.05	ANIM	PN
+P390071	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 00.00.00.29	PN	ANIM
+P390128	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.10.07	ANIM	PN
+P390167	person:delivers_animal  	ur-{d}suen	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.07.12.14	PN	ANIM
+P390234	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Amar-Suen.05.01.00, Amar-Suen.05.12.00"	ANIM	PN
+P390252	person:delivers_animal  	szar-ru-um-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.09.06.13	PN	ANIM
+P390255	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.09.06.11	PN	ANIM
+P390296	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.10.--	ANIM	PN
+P113156	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.08.17	ANIM	PN
+P113158	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.06.05	ANIM	PN
+P113173	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.06.00	PN	ANIM
+P113595	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.01.27	ANIM	PN
+P113624	person:delivers_animal  	nu-i3-da	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.04.28	PN	ANIM
+P113625	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.06.20	ANIM	PN
+P114071	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.01.00	ANIM	PN
+P114327	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.07.04	ANIM	PN
+P115392	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.12d.28 (intercalated)	ANIM	PN
+P115531	person:delivers_animal  	lugal-nir-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.05.12	PN	ANIM
+P115532	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.06.09	PN	ANIM
+P115604	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.00.00.00	PN	ANIM
+P115902	person:delivers_animal  	nu-i3-da	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.09.18	PN	ANIM
+P116158	person:delivers_animal  	ur-{d}suen	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.04.26	PN	ANIM
+P116169	person:delivers_animal  	szu-ru-usz-ki-in	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.06.05.00	PN	ANIM
+P116213	person:delivers_animal  	ur-nigar	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.11.00	PN	ANIM
+P116822	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.03.18	ANIM	PN
+P116826	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.01.04 (us2 year)	ANIM	PN
+P116832	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.08.04	ANIM	PN
+P116834	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.03.24	ANIM	PN
+P117287	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.09.00	PN	ANIM
+P117289	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.06.30 (us2 year)	PN	ANIM
+P117594	person:delivers_animal  	szar-ru-um-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.01.24	PN	ANIM
+P117643	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.35.06.00 (us2 year)	PN	ANIM
+P118299	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.01.29	ANIM	PN
+P118573	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.33.07.00 (us2 year)	PN	ANIM
+P118596	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.28 (us2 year) ?	ANIM	PN
+P118597	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.12.02	ANIM	PN
+P118602	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.03.23	ANIM	PN
+P118604	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.08.00	ANIM	PN
+P143108	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.09.00	ANIM	PN
+P121508	person:delivers_animal  	lugal-ma2-gur8-re	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.01.28	PN	ANIM
+P122160	person:delivers_animal  	ur-nigar	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.08.00	PN	ANIM
+P122169	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.02.03	ANIM	PN
+P122193	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.07.13	ANIM	PN
+P320552	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.06.00	ANIM	PN
+P320571	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.06.21	ANIM	PN
+P320583	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.10.19	ANIM	PN
+P320586	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.11.15	ANIM	PN
+P320597	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.07.24	ANIM	PN
+P320612	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.10.27	ANIM	PN
+P320656	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.03.14	ANIM	PN
+P320824	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.09.21	ANIM	PN
+P320868	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.05.03.04 (us2 year)	ANIM	PN
+P320911	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.07.18 (us2 year)	ANIM	PN
+P320992	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.11d.14 (intercalated)	ANIM	PN
+P332350	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.06.13	ANIM	PN
+P332351	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.06.29	ANIM	PN
+P332356	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.06.00	ANIM	PN
+P332369	person:delivers_animal  	lugal-ma2-gur8-re	masz2	 Puzriš-Dagan (mod. Drehem) ?	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.07.00	PN	ANIM
+P453103	person:has_son	lu2-{d}nanna	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.05.08	PN_1	PN_2
+P342109	person:delivers_animal  	lugal-nir-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.01.00 (us2 year)	PN	ANIM
+P507968	person:delivers_animal  	ur-{d}suen	az	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.04.00	PN	ANIM
+P122541	person:delivers_animal  	szesz-kal-la	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.03.07	PN	ANIM
+P122565	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.01	PN	ANIM
+P122665	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.05.14	ANIM	PN
+P122666	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.10.06	ANIM	PN
+P122705	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.20	ANIM	PN
+P123393	person:delivers_animal  	ur-{d}suen	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.06.12	PN	ANIM
+P123528	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.11.24	PN	ANIM
+P123456	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.02.01	PN	ANIM
+P123594	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.10.22	PN	ANIM
+P123520	person:delivers_animal  	ur-{d}suen	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.16	PN	ANIM
+P123439	person:delivers_animal  	szar-ru-um-i3-li2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.17	PN	ANIM
+P123626	person:delivers_animal  	lugal-nir-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.05.26 (us2 year)	PN	ANIM
+P123422	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.06.18 (us2 year)	PN	ANIM
+P123590	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.01.00 (us2 year)	PN	ANIM
+P123442	person:delivers_animal  	ur-{d}suen	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.05.11 (us2 year)	PN	ANIM
+P123469	person:delivers_animal  	id-da-a	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.05.15 (us2 year)	PN	ANIM
+P123286	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.06.27	PN	ANIM
+P123401	person:delivers_animal  	e2-a-i3-li2	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.--.06.00	PN	ANIM
+P123577	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.05.00	ANIM	PN
+P123501	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.09.17	ANIM	PN
+P123631	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.10.16	ANIM	PN
+P123676	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.11.15	ANIM	PN
+P123567	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.10.28	ANIM	PN
+P123709	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.02.00	ANIM	PN
+P123257	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.09.21	ANIM	PN
+P123505	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.24	ANIM	PN
+P123436	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.08.05 (us2 year)	ANIM	PN
+P123640	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.11.10 (us2 year)	ANIM	PN
+P123395	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.01.20 (us2 year)	ANIM	PN
+P123400	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.10.30	ANIM	PN
+P123639	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.02.19 (us2 year)	ANIM	PN
+P123736	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.08.03	ANIM	PN
+P123741	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.02.00	ANIM	PN
+P123768	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.11.19	ANIM	PN
+P123810	person:delivers_animal  	szu-ru-usz-ki-in	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.03.05	PN	ANIM
+P123831	person:delivers_animal  	id-da-a	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.12.28	PN	ANIM
+P124166	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.02.09	ANIM	PN
+P124169	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.05.17	ANIM	PN
+P124210	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.04.02	ANIM	PN
+P123194	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.05.11.08	ANIM	PN
+P124431	person:delivers_animal  	nir-i3-da-gal2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.04.16	PN	ANIM
+P124478	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.09.23	ANIM	PN
+P124531	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.01.01 (us2 year)	ANIM	PN
+P124532	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.03.07	ANIM	PN
+P124543	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.07.03.27	PN	ANIM
+P414583	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.05.00	ANIM	PN
+P124645	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.08.25	ANIM	PN
+P124663	person:delivers_animal  	nir-i3-da-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.03.00	PN	ANIM
+P424387	person:delivers_animal  	szesz-kal-la	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.04.00	PN	ANIM
+P124857	person:delivers_animal  	ur-{d}suen	az	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.11.29 (us2 year)	PN	ANIM
+P124858	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.06.26	PN	ANIM
+P125425	person:delivers_animal  	id-da-a	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.01.04	PN	ANIM
+P125435	person:delivers_animal  	szar-ru-um-ba-ni	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.09.08.25	PN	ANIM
+P125475	person:delivers_animal  	ARAD2-mu	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.12.15	PN	ANIM
+P125508	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.10.18	PN	ANIM
+P125630	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šulgi.48.11.23, Šulgi.48.11.29"	ANIM	PN
+P125662	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.05.00	PN	ANIM
+P125817	person:receives_animal  	gu4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šū-Suen.07.01.00, Šū-Suen.07.03.00, Šū-Suen.07.08.00, Šū-Suen.07.09.00, Šū-Suen.07.12.00"	ANIM	PN
+P125842	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.11.00	ANIM	PN
+P125862	person:receives_animal  	masz2	lu2-bala-sa6-ga	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Šū-Suen.08.01.00, Šū-Suen.08.12.00"	ANIM	PN
+P125996	person:receives_animal  	{ansze}kunga2	szesz-kal-la	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.12.00	ANIM	PN
+P126335	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.05.23	ANIM	PN
+P126368	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.35.05.00 (us2 year)	PN	ANIM
+P126368	person_delivers:person_recieves	ARAD2-mu	ur-{d}en-lil2-la2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.35.05.00 (us2 year)	PN_1	PN_2
+P126396	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.00.00.06	ANIM	PN
+P126400	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 --.--.--.--	PN	ANIM
+P126423	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.11.13 (us2 year)	ANIM	PN
+P126424	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.05.25	ANIM	PN
+P126458	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.12.27	ANIM	PN
+P126474	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.08.19	ANIM	PN
+P126492	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.01.09 (us2 year)	ANIM	PN
+P126497	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.07.25	ANIM	PN
+P126514	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.05.20	ANIM	PN
+P126560	person:delivers_animal  	id-da-a	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 --.--.04.11	PN	ANIM
+P126582	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.11.26	ANIM	PN
+P126586	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.02.09m.00 (intercalated)	ANIM	PN
+P126628	person:has_son	szesz-kal-la	ur-{d}en-lil2-la2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 00.00.00.00	PN_1	PN_2
+P332040	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.12.00	PN	ANIM
+P126706	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.04.04.09 (us2 year)	PN	ANIM
+P126797	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.00.00	PN	ANIM
+P126808	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.07.24	ANIM	PN
+P201414	person:delivers_animal  	szar-ru-um-ba-ni	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.01.02.29	PN	ANIM
+P127377	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.01.00	ANIM	PN
+P127839	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Ibbi-Suen.01.12d.00 (intercalated)	ANIM	PN
+P128615	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.27	ANIM	PN
+P128611	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.07.10	ANIM	PN
+P128763	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.27	PN	ANIM
+P128826	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.01.02 (us2-us2 year)	ANIM	PN
+P128829	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.08.16	ANIM	PN
+P128831	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.12.04	ANIM	PN
+P128834	person:receives_animal  	az	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.07.26	ANIM	PN
+P128836	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.03.19	ANIM	PN
+P128837	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.12.20	ANIM	PN
+P218092	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.01.24	ANIM	PN
+P143517	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.06.00	PN	ANIM
+P143656	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.04.00 (us2 year)	ANIM	PN
+P144366	person:delivers_animal  	szesz-kal-la	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	" Amar-Suen.09.01.00, Amar-Suen.09.05.00"	PN	ANIM
+P129411	person:delivers_animal  	e2-a-i3-li2	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.45.09.02	PN	ANIM
+P129418	person:delivers_animal  	ur-nigar{gar}	masz2	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.02.04	PN	ANIM
+P129441	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.06.10.28	ANIM	PN
+P130510	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.04.23	ANIM	PN
+P131871	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.09m.16 (intercalated)	ANIM	PN
+P131878	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.12.08 (us2 year)	ANIM	PN
+P131894	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.03.00	ANIM	PN
+P131940	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.06.00	ANIM	PN
+P131944	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.09.03	ANIM	PN
+P131957	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.43.09.00	ANIM	PN
+P131974	person:delivers_animal  	nu-i3-da	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.05.11	PN	ANIM
+P131995	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.48.07.24	ANIM	PN
+P132001	person:delivers_animal  	lu2-{d}nanna	masz-da3	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.38.12.00 (us2 year)	PN	ANIM
+P132011	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.12.04	ANIM	PN
+P132046	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.10.29	ANIM	PN
+P132075	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.03.13	ANIM	PN
+P132076	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.03.00	ANIM	PN
+P132112	person:delivers_animal  	ur-{d}en-lil2-la2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.10.21	PN	ANIM
+P132129	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.10.00	ANIM	PN
+P133838	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.01.23 (us2 year)	PN	ANIM
+P133937	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.23	ANIM	PN
+P133943	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.10.04 (us2 year)	ANIM	PN
+P133945	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.27.07.22	ANIM	PN
+P133949	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.02.08	ANIM	PN
+P133952	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.07.12	ANIM	PN
+P133953	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.09.21	ANIM	PN
+P133956	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.03.01.09	ANIM	PN
+P133973	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šū-Suen.03.04.04 (us2 year)	ANIM	PN
+P500197	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.08.08	ANIM	PN
+P134268	person:receives_animal  	masz-da3	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.07.08 (us2 year)	ANIM	PN
+P134795	person:delivers_animal  	ur-nigar{gar}	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.05.25 (us2 year)	PN	ANIM
+P134797	person:delivers_animal  	lu2-{d}nanna	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.46.11.27	PN	ANIM
+P134798	person:delivers_animal  	id-da-a	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.05.00	PN	ANIM
+P134883	person:delivers_animal  	lugal-nir-gal2	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.08.00	PN	ANIM
+P134887	person:delivers_animal  	ur-{d}suen	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.06.10	PN	ANIM
+P134975	person:receives_animal  	gukkal	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.47.08.11 (us2 year)	ANIM	PN
+P134978	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.01.04.09	ANIM	PN
+P134983	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.02.12.04	ANIM	PN
+P136059	person:receives_animal  	sila4	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.07.02	ANIM	PN
+P136060	person:delivers_animal  	szar-ru-um-ba-ni	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.07.04.13	PN	ANIM
+P136070	person:receives_animal  	masz2	ur-nigar{gar}	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.44.11.00	ANIM	PN
+P235549	person:delivers_animal  	ARAD2-mu	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Šulgi.42.00.00	PN	ANIM
+P200579	person:delivers_animal  	ur-{d}suen	sila4	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.04.05.03	PN	ANIM
+P142404	person:is_king	szesz-kal-la	szesz-kal-la	 Puzriš-Dagan (mod. Drehem)	 Ur III (ca. 2100-2000 BC)	 Amar-Suen.05.05.30	PN	PN

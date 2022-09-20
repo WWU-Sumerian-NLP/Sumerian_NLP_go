@@ -14,7 +14,7 @@ type DataWriter struct {
 	csvWriter *csv.Writer
 }
 
-func newDataWriter(destPath string, in <-chan RelationData) *DataWriter {
+func NewDataWriter(destPath string, in <-chan RelationData) *DataWriter {
 	dataWriter := &DataWriter{
 		destPath: destPath,
 		in:       in,

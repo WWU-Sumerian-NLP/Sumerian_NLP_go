@@ -12,10 +12,10 @@ type PipelineTestSuite struct {
 
 func (suite *PipelineTestSuite) TestPipeline() {
 	// runPipeline("test_data/entity_extraction_input.atf", "output/test_data.tsv")
-	runPipeline("../CDLI_Extractor/output/new_result_pipeline.tsv", "output/ie_data.tsv")
+	// runPipeline("../CDLI_Extractor/output/urr3_no_annotations.tsv", "output/urr3_ie_no_annotations.tsv")
+	runPipeline("../CDLI_Extractor/output/urr3_annotations.tsv", "output/urr3_ie_annotations.tsv")
 	// runPipeline("../CDLI_Extractor/output/all_tablets_data.tsv", "output/all_ie_data.tsv")
-	// runCDLIParserPipeline("../../sumerian_tablets/cdli_atf_20220525.txt", "output/parsed_cdli.tsv")
-	// runEntityPipeline("output/new_pipeline.tsv", "output/new_entity_pipeline.tsv")
+	// runPipeline("../CDLI_Extractor/output/unblocked_data.tsv", "output/unblocked_ie_data.tsv")
 
 }
 
