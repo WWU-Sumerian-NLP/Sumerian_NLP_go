@@ -1,4 +1,4 @@
-module github.com/HGuzman-Soto/CDLI_Extractor
+module urr3-drehem-KG/Data_Pipeline_go/CDLI_Extractor
 
 go 1.17
 
