@@ -1,4 +1,4 @@
-module github.com/HGuzman-Soto/IE_Extractor
+module github.com/urr3-drehem-KG/Data_Pipeline_go/IE_Extractor
 
 go 1.17
 

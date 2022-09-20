@@ -1,4 +1,4 @@
-module urr3-drehem-KG/Data_Pipeline_go/CDLI_Extractor
+module github.com/urr3-drehem-KG/Data_Pipeline_go/CDLI_Extractor
 
 go 1.17
 
