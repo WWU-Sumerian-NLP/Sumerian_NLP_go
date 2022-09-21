@@ -33,7 +33,7 @@ func NewRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractor
 	relationExtractor.re = re
 	relationExtractor.re2 = re_2
 
-	relationExtractor.RelationDataList = readRelationTypesCsv("tests/relation_input.tsv")
+	relationExtractor.RelationDataList = readRelationTypesCsv("relation_input.tsv")
 	relationExtractor.run()
 	return relationExtractor
 }
