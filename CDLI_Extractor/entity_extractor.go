@@ -10,22 +10,24 @@ import (
 )
 
 type CDLIEntityExtractor struct {
-	in      <-chan CDLIData
-	out     chan CDLIData
-	done    chan struct{}
-	nerList []string
-	nerMap  map[string]map[string]string
+	in         <-chan CDLIData
+	Out        chan CDLIData
+	done       chan struct{}
+	nerList    []string
+	nerMap     map[string]map[string]string
+	TempNERMap map[string]string
 }
 
-func newCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
+func NewCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 	entityExtractor := &CDLIEntityExtractor{
 		in:   in,
-		out:  make(chan CDLIData, 100000000),
+		Out:  make(chan CDLIData, 100000000),
 		done: make(chan struct{}, 1),
 		nerList: []string{"city_ner.csv", "months_ner.csv", "royalname_ner.csv", "governors_ner.csv", "people_ner.csv", "animals_ner.csv", "foreigners_ner.csv",
 			"agricultural_locus_ner.csv", "ancestral_clan_line_ner.csv", "celestial_ner.csv", "city_quarter_ner.csv", "divine_ner.csv", "ethnos_ner.csv", "field_ner.csv",
 			"geographical_ner.csv", "object_ner.csv", "temple_ner.csv", "watercourse_ner.csv"},
-		nerMap: make(map[string]map[string]string, 0),
+		nerMap:     make(map[string]map[string]string, 0),
+		TempNERMap: make(map[string]string),
 	}
 	entityExtractor.readNERLists()
 	entityExtractor.run()
@@ -47,10 +49,10 @@ func (e *CDLIEntityExtractor) run() {
 				tablet.EntitiyLines = make([]string, len(tablet.LineNumbers))
 				cdliData.TabletSections[i].EntitiyLines = e.labelAllGraphemes(tablet)
 			}
-			e.out <- cdliData
+			e.Out <- cdliData
 		}
 		println("DONE")
-		close(e.out)
+		close(e.Out)
 	}()
 	wg.Wait()
 }
@@ -75,7 +77,8 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 	for line_no, translit := range tabletLines.TabletLines {
 		grapheme_list := strings.Split(translit, " ")
 		for i, grapheme := range grapheme_list {
-			grapheme = e.getFromNERLists(grapheme) //first get from annotation lists
+			// grapheme = e.getFromNERLists(grapheme) //first get from annotation lists
+			grapheme = e.getFromTempNERList(grapheme)
 			grapheme = e.labelRelation(grapheme)
 			if !strings.Contains(grapheme, ",") { //second, based on context (n-1)
 				if i > 0 && grapheme_list[i-1] == "iti" {
@@ -91,6 +94,14 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 		}
 	}
 	return tabletLines.EntitiyLines
+}
+
+func (e *CDLIEntityExtractor) getFromTempNERList(grapheme string) string {
+	new_grapheme := grapheme
+	if ner, ok := e.TempNERMap[grapheme]; ok {
+		new_grapheme = "(" + grapheme + "," + ner + ")"
+	}
+	return new_grapheme
 }
 
 //Get from NER_lists

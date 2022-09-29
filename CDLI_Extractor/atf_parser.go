@@ -36,7 +36,7 @@ type ATFParser struct {
 	path         string
 	data         []string
 	currCLDIData CDLIData
-	out          chan CDLIData
+	Out          chan CDLIData
 	done         chan struct{}
 	re           regexp.Regexp
 }
@@ -44,7 +44,7 @@ type ATFParser struct {
 func NewATFParser(path string) *ATFParser {
 	atfParser := &ATFParser{
 		path: path,
-		out:  make(chan CDLIData, 10000000),
+		Out:  make(chan CDLIData, 10000000),
 		done: make(chan struct{}, 1),
 	}
 	atfParser.loadCDLIData()
@@ -59,13 +59,13 @@ func (p *ATFParser) run() {
 	go func() {
 		println("atf parsing")
 		defer wg.Done()
-		defer close(p.out)
+		defer close(p.Out)
 		for _, line := range p.data {
 			p.parseLines(line)
 		}
 		println("DONE")
 		// fmt.Printf("p.currCLDIData: %v\n", p.currCLDIData)
-		p.out <- p.currCLDIData
+		p.Out <- p.currCLDIData
 	}()
 	wg.Wait()
 }
@@ -102,7 +102,7 @@ func (p *ATFParser) parseLines(line string) {
 	if line != "" && strings.Contains(line, "Primary publication") {
 		// Send tablet downstream and init new tablet object
 		if p.currCLDIData.PUB != "" {
-			p.out <- p.currCLDIData
+			p.Out <- p.currCLDIData
 			fmt.Printf("p.currCLDIData: %v\n", p.currCLDIData)
 			p.currCLDIData = CDLIData{}
 		}
@@ -122,7 +122,7 @@ func (p *ATFParser) parseLines(line string) {
 	} else if line != "" && strings.Contains(line, "&P") && strings.Contains(line, " =") {
 		// TODO: Send tablet downstream and init new tablet object with alternative format
 		if p.currCLDIData.PUB != "" {
-			p.out <- p.currCLDIData
+			p.Out <- p.currCLDIData
 			p.currCLDIData = CDLIData{}
 		}
 		line = strings.ReplaceAll(line, "&", "")

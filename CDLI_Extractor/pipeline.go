@@ -3,10 +3,10 @@ package CDLI_Extractor
 //runPipeline will run entire pipeline
 func runPipeline(path, destPath string) {
 	atfParser := NewATFParser(path)
-	transliterationCleaner := newTransliterationCleaner(false, atfParser.out)
-	atfNormalizer := newATFNormalizer(false, transliterationCleaner.out)
-	entityExtractor := newCDLIEntityExtractor(atfNormalizer.out)
-	dataWriter := newDataWriter(destPath, entityExtractor.out)
+	transliterationCleaner := NewTransliterationCleaner(false, atfParser.Out)
+	atfNormalizer := newATFNormalizer(false, transliterationCleaner.Out)
+	entityExtractor := NewCDLIEntityExtractor(atfNormalizer.out)
+	dataWriter := NewDataWriter(destPath, entityExtractor.Out)
 
 	go func() {
 		println("running pipeline")
@@ -20,7 +20,7 @@ func runPipeline(path, destPath string) {
 
 func runCDLIParserPipeline(path, destPath string) {
 	atfParser := NewATFParser(path)
-	dataWriter := newDataWriter(destPath, atfParser.out)
+	dataWriter := NewDataWriter(destPath, atfParser.Out)
 
 	go func() {
 		println("running CDLI Parser")
@@ -32,8 +32,8 @@ func runCDLIParserPipeline(path, destPath string) {
 func runEntityPipeline(path, destPath string) {
 	in := readCDLIData(path)
 	println("test")
-	entityExtractor := newCDLIEntityExtractor(in)
-	dataWriter := newDataWriter(destPath, entityExtractor.out)
+	entityExtractor := NewCDLIEntityExtractor(in)
+	dataWriter := NewDataWriter(destPath, entityExtractor.Out)
 
 	go func() {
 		println("running entity extraction")

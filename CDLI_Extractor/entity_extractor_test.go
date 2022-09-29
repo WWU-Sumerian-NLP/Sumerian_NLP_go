@@ -14,8 +14,8 @@ type CLDIEntityExtractorTest struct {
 func (suite *CLDIEntityExtractorTest) TestEntityExtraction() {
 	parsedLines := make(chan CDLIData, 10)
 	entitiesParsed := make(chan CDLIData, 10)
-	parser := &ATFParser{path: "test_data/entity_extraction_input.atf", out: parsedLines, done: make(chan struct{}, 1)}
-	entityExtractor := &CDLIEntityExtractor{in: parser.out, out: entitiesParsed, done: make(chan struct{}, 1)}
+	parser := &ATFParser{path: "test_data/entity_extraction_input.atf", Out: parsedLines, done: make(chan struct{}, 1)}
+	entityExtractor := &CDLIEntityExtractor{in: parser.Out, Out: entitiesParsed, done: make(chan struct{}, 1)}
 	parser.loadCDLIData()
 	parser.run()
 	entityExtractor.run()

@@ -13,14 +13,14 @@ type TransliterationCleaner struct {
 	// path        string
 	in          <-chan CDLIData
 	dropTablets bool
-	out         chan CDLIData
+	Out         chan CDLIData
 	done        chan struct{}
 }
 
-func newTransliterationCleaner(dropTablets bool, in <-chan CDLIData) *TransliterationCleaner {
+func NewTransliterationCleaner(dropTablets bool, in <-chan CDLIData) *TransliterationCleaner {
 	transliterationCleaner := &TransliterationCleaner{
 		in:          in,
-		out:         make(chan CDLIData, 10000000),
+		Out:         make(chan CDLIData, 10000000),
 		done:        make(chan struct{}, 1),
 		dropTablets: dropTablets,
 	}
@@ -34,7 +34,7 @@ func (c *TransliterationCleaner) run() {
 	go func() {
 		println("cleaning tablets transliteration")
 		defer wg.Done()
-		defer close(c.out)
+		defer close(c.Out)
 		for cdliTablet := range c.in { //we should analyze tablet section by section + line by line
 			for i, tabletSection := range cdliTablet.TabletSections {
 				cdliTablet.TabletSections[i].isBroken = false //temporary
@@ -44,7 +44,7 @@ func (c *TransliterationCleaner) run() {
 				}
 			}
 			//else pass downstream
-			c.out <- cdliTablet
+			c.Out <- cdliTablet
 		}
 		println("DONE")
 	}()

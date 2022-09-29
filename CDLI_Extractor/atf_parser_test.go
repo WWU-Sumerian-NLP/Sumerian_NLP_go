@@ -12,7 +12,7 @@ type ATFParserTestSuite struct {
 
 func (suite *ATFParserTestSuite) TestATFParser() {
 	parsedLines := make(chan CDLIData, 10)
-	parser := &ATFParser{path: "test_data/atf_test_input.atf", out: parsedLines, done: make(chan struct{}, 1)}
+	parser := &ATFParser{path: "test_data/atf_test_input.atf", Out: parsedLines, done: make(chan struct{}, 1)}
 	parser.loadCDLIData()
 	parser.run()
 	parser.WaitUntilDone()

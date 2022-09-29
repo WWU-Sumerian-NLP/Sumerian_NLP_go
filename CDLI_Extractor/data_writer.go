@@ -15,7 +15,7 @@ type DataWriter struct {
 	csvWriter *csv.Writer
 }
 
-func newDataWriter(destPath string, in <-chan CDLIData) *DataWriter {
+func NewDataWriter(destPath string, in <-chan CDLIData) *DataWriter {
 	dataWriter := &DataWriter{
 		destPath: destPath,
 		in:       in,
