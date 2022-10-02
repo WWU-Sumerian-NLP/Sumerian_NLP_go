@@ -7,7 +7,7 @@ func runPipeline(path, destPath string) {
 	dataWriter := NewDataWriter(destPath, RelationExtractorRB.Out)
 
 	go func() {
-		println("running pipeline")
+		// println("running pipeline")
 		dataWriter.WaitUntilDone()
 		RelationExtractorRB.WaitUntilDone()
 		cdliParser.WaitUntilDone()

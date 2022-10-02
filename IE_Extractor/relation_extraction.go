@@ -61,8 +61,9 @@ func (r *RelationExtractorRB) run() {
 					relationTuple := relationData.getRelationTuple(strings.Split(relationData.tags, ","), extractedRelationTuple)
 					fmt.Printf("relationData.relationTuple: %v\n", relationData.relationTuple)
 					relationData.relationTuple = relationTuple
+					fmt.Printf("PASSING relationData: %v\n", relationData)
+					break
 					r.Out <- relationData
-
 				}
 			}
 		}
