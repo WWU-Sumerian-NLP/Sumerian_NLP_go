@@ -62,7 +62,6 @@ func (r *RelationExtractorRB) run() {
 					fmt.Printf("relationData.relationTuple: %v\n", relationData.relationTuple)
 					relationData.relationTuple = relationTuple
 					fmt.Printf("PASSING relationData: %v\n", relationData)
-					break
 					r.Out <- relationData
 				}
 			}

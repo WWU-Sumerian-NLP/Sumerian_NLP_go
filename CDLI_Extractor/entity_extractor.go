@@ -77,8 +77,8 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 	for line_no, translit := range tabletLines.TabletLines {
 		grapheme_list := strings.Split(translit, " ")
 		for i, grapheme := range grapheme_list {
-			// grapheme = e.getFromNERLists(grapheme) //first get from annotation lists
-			grapheme = e.getFromTempNERList(grapheme)
+			grapheme = e.getFromNERLists(grapheme) //first get from annotation lists
+			// grapheme = e.getFromTempNERList(grapheme)
 			grapheme = e.labelRelation(grapheme)
 			if !strings.Contains(grapheme, ",") { //second, based on context (n-1)
 				if i > 0 && grapheme_list[i-1] == "iti" {

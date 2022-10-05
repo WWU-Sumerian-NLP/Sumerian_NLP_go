@@ -2,6 +2,7 @@ package IE_Extractor
 
 import (
 	"encoding/csv"
+	"fmt"
 	"log"
 	"os"
 	"sync"
@@ -31,6 +32,7 @@ func (w *DataWriter) run() {
 	go func() {
 		defer wg.Done()
 		for relationData := range w.in {
+			fmt.Printf("WRITING the relationData: %v\n", relationData)
 			w.exportToCSV(relationData)
 		}
 	}()
