@@ -29,7 +29,7 @@ func NewCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 		nerMap:     make(map[string]map[string]string, 0),
 		TempNERMap: make(map[string]string),
 	}
-	// entityExtractor.readNERLists()
+	entityExtractor.readNERLists()
 	entityExtractor.run()
 	return entityExtractor
 }
