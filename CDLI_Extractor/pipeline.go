@@ -1,8 +1,8 @@
 package CDLI_Extractor
 
-//runPipeline will run entire pipeline
+// runPipeline will run entire pipeline
 func runPipeline(path, destPath string) {
-	atfParser := NewATFParser(path)
+	atfParser := NewATFParser(path, false)
 	transliterationCleaner := NewTransliterationCleaner(false, atfParser.Out)
 	atfNormalizer := newATFNormalizer(false, transliterationCleaner.Out)
 	entityExtractor := NewCDLIEntityExtractor(atfNormalizer.out)

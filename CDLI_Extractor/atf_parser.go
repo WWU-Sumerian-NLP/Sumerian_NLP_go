@@ -11,12 +11,14 @@ import (
 	"sync"
 )
 
-/*CDLIData is a structure that encapsulates information about a tablet from CDLI website.
+/*
+CDLIData is a structure that encapsulates information about a tablet from CDLI website.
 
 It includes various identifiers, details of the tablet's provenance and period, any referenced dates,
 relation tuples, and an array of sections that make up the tablet.
 
-Each line maps to a line_no, transliterations, normalizations and annotations.*/
+Each line maps to a line_no, transliterations, normalizations and annotations.
+*/
 type CDLIData struct {
 	TabletNum       string
 	PUB             string
@@ -45,22 +47,25 @@ type TabletSection struct {
 // It includes the path to the file being parsed, the raw data, the current CDLIData being constructed,
 // output and done channels for signaling completion of the parsing process, and a regex expression.
 type ATFParser struct {
-	path         string
-	data         []string
-	currCLDIData CDLIData
-	Out          chan CDLIData
-	done         chan struct{}
-	re           regexp.Regexp
+	path           string
+	verboseTablets bool
+	data           []string
+	currCLDIData   CDLIData
+	Out            chan CDLIData
+	done           chan struct{}
+	re             regexp.Regexp
 }
 
 // NewATFParser() initializes a new ATFParser with the provided path.
 // It then loads the data from the file at the path, compiles the regex used in parsing,
 // and starts the parsing process.
-func NewATFParser(path string) *ATFParser {
+// There are 2 versions of tablet, one is just the tablet and the other version contains the metadata
+func NewATFParser(path string, verboseTablets bool) *ATFParser {
 	atfParser := &ATFParser{
-		path: path,
-		Out:  make(chan CDLIData, 10000000),
-		done: make(chan struct{}, 1),
+		path:           path,
+		verboseTablets: verboseTablets,
+		Out:            make(chan CDLIData, 10000000),
+		done:           make(chan struct{}, 1),
 	}
 	atfParser.loadCDLIData()
 	atfParser.re = *regexp.MustCompile("[0-9]+")
@@ -108,19 +113,18 @@ func (p *ATFParser) loadCDLIData() {
 	}
 }
 
-//Parse Tablet Line-By-Line.
-//	- &P indicates a new tablet, we initalize p.currCLDIData for a new tablet
-//	- Store CLDI, PUB, annotation and transliterations data to this object
-//	- @ indicates a new tablet section, we initalize a new TabletSection object
-//	- #tr.en indicates a transliteration annotation, we store this annotation to the current TabletSection object
-//	- . indicates a new line, we store this line to the current TabletSection object
-//	- $ indicates a new line, we store this line to the current TabletSection object
-//	- x indicates a new line, we store this line to the current TabletSection object
-//	- If we encounter a new tablet, we send the current tablet downstream and initalize a new tablet object
-//	- If we encounter a new tablet section, we initalize a new TabletSection object
-//	- If we encounter a new line, we store this line to the current TabletSection object
-//	- If we encounter a new annotation, we store this annotation to the current TabletSection object
-//
+// Parse Tablet Line-By-Line.
+//   - &P indicates a new tablet, we initalize p.currCLDIData for a new tablet
+//   - Store CLDI, PUB, annotation and transliterations data to this object
+//   - @ indicates a new tablet section, we initalize a new TabletSection object
+//   - #tr.en indicates a transliteration annotation, we store this annotation to the current TabletSection object
+//   - . indicates a new line, we store this line to the current TabletSection object
+//   - $ indicates a new line, we store this line to the current TabletSection object
+//   - x indicates a new line, we store this line to the current TabletSection object
+//   - If we encounter a new tablet, we send the current tablet downstream and initalize a new tablet object
+//   - If we encounter a new tablet section, we initalize a new TabletSection object
+//   - If we encounter a new line, we store this line to the current TabletSection object
+//   - If we encounter a new annotation, we store this annotation to the current TabletSection object
 //
 // parseLines() processes a given line from the file. It recognizes and extracts various types of information
 // from the line based on its contents, such as the tablet's primary publication, provenience, period,
@@ -219,7 +223,7 @@ func NotTabletSubsection(line string) bool {
 // findLineNumber() extracts the line number from the given string. The line number is assumed to be an integer embedded within the string.
 // If the line number cannot be extracted or converted to an integer, an error message is printed and a zero value is returned.
 //
-//Line number comes in the form of strings like (1.), ('1.) which needs to be converted to an int
+// Line number comes in the form of strings like (1.), ('1.) which needs to be converted to an int
 func findLineNumber(re *regexp.Regexp, line string) int {
 	intString := re.FindString(line)
 	lineNumber, err := strconv.Atoi(intString)
