@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+// RelationData is a type that holds relationship data, including relation type, regex rules, subject and object tags,
+// and tags for how they would be extracted, as well as some metadata.
 type RelationData struct {
 	tabletNum     string
 	relationType  string
@@ -23,6 +25,7 @@ type RelationData struct {
 	datesReferenced string
 }
 
+// NewRelationData constructs a new RelationData with the specified relation type, subject, object, regex rules, and tags.
 func NewRelationData(relationType string, subject string, object string, regexRules string, tags string) *RelationData {
 	return &RelationData{relationType: relationType, regexRules: regexRules, subjectTag: subject, objectTag: object, tags: tags}
 }
@@ -35,6 +38,8 @@ func NewRelationData(relationType string, subject string, object string, regexRu
 
 // extractedRegexTuple - (PN, ANIM DEL) ---> (DEL, PN, ANIM)
 
+// getRelationTuple transforms an extracted regex tuple and a transliteration tuple into a relation tuple.
+// It uses the relation data's relation type, subject tag, and object tag to identify the subject and object in the extracted tuple.
 func (r *RelationData) getRelationTuple(extractedRegexTuple []string, transliterationTuple []string) [3]string {
 	relationTuple := [3]string{}
 
@@ -61,6 +66,9 @@ func (r *RelationData) getRelationTuple(extractedRegexTuple []string, transliter
 	return relationTuple
 }
 
+// readRelationTypesCsv reads relation data from a CSV file at the given path.
+// Each row in the CSV file should contain a relation type, subject tag, object tag, regex rules, and tags.
+// The returned RelationData slice contains one RelationData for each non-header row in the CSV file.
 func readRelationTypesCsv(pathToRelationTypesCSV string) []RelationData {
 	csvFile, err := os.Open(pathToRelationTypesCSV)
 	if err != nil {

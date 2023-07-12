@@ -1,3 +1,8 @@
+/*
+Package CDLI_Extractor is used to extract entities from the CDLI (Cuneiform Digital Library Initiative) data.
+It uses Named Entity Recognition (NER) lists to label entities in the input data.
+*/
+
 package CDLI_Extractor
 
 import (
@@ -9,6 +14,8 @@ import (
 	"sync"
 )
 
+// CDLIEntityExtractor is the main struct for this package.
+// It holds the input and output channels for the data, a list of NER lists, and maps for storing and handling the NER data.
 type CDLIEntityExtractor struct {
 	in         <-chan CDLIData
 	Out        chan CDLIData
@@ -18,6 +25,8 @@ type CDLIEntityExtractor struct {
 	TempNERMap map[string]string
 }
 
+// NewCDLIEntityExtractor is the constructor function for the CDLIEntityExtractor.
+// It initializes a new instance of the CDLIEntityExtractor with a given input channel.
 func NewCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 	entityExtractor := &CDLIEntityExtractor{
 		in:   in,
@@ -34,10 +43,12 @@ func NewCDLIEntityExtractor(in <-chan CDLIData) *CDLIEntityExtractor {
 	return entityExtractor
 }
 
+// WaitUntilDone sends a signal that the entity extraction is done.
 func (e *CDLIEntityExtractor) WaitUntilDone() {
 	e.done <- struct{}{}
 }
 
+// run starts the entity extraction process. It traverses each CDLI data from the input channel and labels the entities found.
 func (e *CDLIEntityExtractor) run() {
 	var wg sync.WaitGroup
 	wg.Add(1)
@@ -73,6 +84,7 @@ Then, I'll need a way to parse all this info (parse by parenthesis)
 
 */
 
+// labelAllGraphemes labels the entities in all graphemes of a tablet section.
 func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []string {
 	for line_no, translit := range tabletLines.TabletLines {
 		grapheme_list := strings.Split(translit, " ")
@@ -96,6 +108,7 @@ func (e *CDLIEntityExtractor) labelAllGraphemes(tabletLines TabletSection) []str
 	return tabletLines.EntitiyLines
 }
 
+// getFromTempNERList retrieves the entity label for a grapheme from the temporary NER list.
 func (e *CDLIEntityExtractor) getFromTempNERList(grapheme string) string {
 	new_grapheme := grapheme
 	if ner, ok := e.TempNERMap[grapheme]; ok {
@@ -104,6 +117,7 @@ func (e *CDLIEntityExtractor) getFromTempNERList(grapheme string) string {
 	return new_grapheme
 }
 
+// getFromNERLists retrieves the entity label for a grapheme from the NER lists.
 //Get from NER_lists
 func (e *CDLIEntityExtractor) getFromNERLists(grapheme string) string {
 	new_grapheme := grapheme
@@ -117,6 +131,7 @@ func (e *CDLIEntityExtractor) getFromNERLists(grapheme string) string {
 	return new_grapheme
 }
 
+// labelRelation labels a grapheme based on a specific list of relations.
 //TODO - Read a list?
 func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
 	if grapheme == "mu-kux(DU)" {
@@ -138,6 +153,7 @@ func (e *CDLIEntityExtractor) labelRelation(grapheme string) string {
 
 }
 
+// readNERLists reads the NER lists from CSV files and stores them in a map.
 //Read a list of NER lists [ner.csv, ner2.csv] and store a map of filenames to a map of entity relations
 func (e *CDLIEntityExtractor) readNERLists() {
 	fileNameToNerMap := make(map[string]map[string]string, len(e.nerList))

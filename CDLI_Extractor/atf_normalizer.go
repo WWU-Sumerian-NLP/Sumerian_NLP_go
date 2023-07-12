@@ -8,6 +8,8 @@ import (
 
 const comment_regex = `((|-|)\(\$.+\$\)(|-|))`
 
+// ATFNormalizer is a type that provides methods for normalizing the transliteration data within CDLIData types.
+// It reads from an input channel of CDLIData, performs normalization operations, and sends the normalized data to an output channel.
 type ATFNormalizer struct {
 	rawTransliteration []string
 	normalizeDefective bool
@@ -16,6 +18,8 @@ type ATFNormalizer struct {
 	done               chan struct{}
 }
 
+// newATFNormalizer creates a new instance of an ATFNormalizer. The normalizer immediately starts reading from
+// its input channel and normalizing data in a separate goroutine. The normalized data is sent to its output channel.
 func newATFNormalizer(normalizeDefective bool, in <-chan CDLIData) *ATFNormalizer {
 	atfNormalizer := &ATFNormalizer{
 		normalizeDefective: false,
@@ -27,6 +31,8 @@ func newATFNormalizer(normalizeDefective bool, in <-chan CDLIData) *ATFNormalize
 	return atfNormalizer
 }
 
+// run manages the main normalization loop for the normalizer. It reads tablets from the input channel, normalizes their transliterations,
+// and sends the normalized tablets to the output channel. It finishes when all input data has been read and normalized.
 func (n *ATFNormalizer) run() {
 	var wg sync.WaitGroup
 	wg.Add(1)
@@ -48,10 +54,13 @@ func (n *ATFNormalizer) run() {
 
 }
 
+// WaitUntilDone allows external callers to wait until the normalizer has finished processing all of its input data.
 func (n *ATFNormalizer) WaitUntilDone() {
 	n.done <- struct{}{}
 }
 
+// parseRawTransliteration performs normalization operations on the transliteration lines of a given TabletSection.
+// The normalized transliteration lines are returned.
 func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) []string {
 	for line_no, translit := range TabletSection.TabletLines {
 		//remove comments - Apply regex expression
@@ -69,6 +78,8 @@ func (n *ATFNormalizer) parseRawTransliteration(TabletSection TabletSection) []s
 	return TabletSection.NormalizedLines
 }
 
+// parseTransliterationGraphemes performs normalization operations on a given grapheme within a transliteration line.
+// The normalized grapheme is returned.
 func (n *ATFNormalizer) parseTransliterationGraphemes(grapheme string) string {
 	grapheme = strings.ReplaceAll(grapheme, " ", "")
 	// grapheme = n.replaceBracesNSlashes()
@@ -85,6 +96,8 @@ func (n *ATFNormalizer) parseTransliterationGraphemes(grapheme string) string {
 	return grapheme
 }
 
+// replaceBracesNSlashes replaces braces and slashes within a grapheme with a suitable replacement.
+// It returns the grapheme with replaced characters.
 //broken
 func (n *ATFNormalizer) replaceBracesNSlashes() string {
 	bracesList := map[string]struct{}{
@@ -111,6 +124,7 @@ func (n *ATFNormalizer) replaceBracesNSlashes() string {
 
 }
 
+// getUnicodeIndex returns the Unicode index for a given signDictionary. The returned string is the Unicode index.
 func (n *ATFNormalizer) getUnicodeIndex(signDictionary []string) string {
 	return ""
 }

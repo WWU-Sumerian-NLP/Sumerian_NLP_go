@@ -10,6 +10,9 @@ import (
 const findParenthesis = `\([^)]*\)|\[[^\]]*\]g`
 const findInnerParenthesis = `\([^DU(,)]*\)|\[[^\]]*\]g` //regex gets inner para like 1(disz) except DEL
 
+// RelationExtractorRB is a type that holds channels for data input and output, regular expressions,
+// and a list of RelationData objects. This type is responsible for reading TaggedTransliterations
+// from the input channel and writing extracted RelationData to the output channel.
 type RelationExtractorRB struct {
 	in               <-chan TaggedTransliterations
 	Out              chan RelationData
@@ -20,6 +23,9 @@ type RelationExtractorRB struct {
 	RelationDataList []RelationData
 }
 
+// NewRelationExtractorRB creates a new RelationExtractorRB object, prepares its regex rules,
+// and initializes the list of RelationData objects by reading from a CSV file.
+// It then starts the extraction process.
 func NewRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractorRB {
 	relationExtractor := &RelationExtractorRB{
 		in:            in,
@@ -38,10 +44,14 @@ func NewRelationExtractorRB(in <-chan TaggedTransliterations) *RelationExtractor
 	return relationExtractor
 }
 
+// WaitUntilDone waits until the relation extraction process is done.
 func (r *RelationExtractorRB) WaitUntilDone() {
 	r.done <- struct{}{}
 }
 
+// run starts the relation extraction process. It reads TaggedTransliterations from the input
+// channel and writes extracted RelationData to the output channel. It also waits for all
+// goroutines to finish before returning.
 func (r *RelationExtractorRB) run() {
 	var wg sync.WaitGroup
 	wg.Add(1)
@@ -72,6 +82,9 @@ func (r *RelationExtractorRB) run() {
 	wg.Wait()
 }
 
+// extractFromRegexRules extracts relations from a given string (representing all lines from a tablet)
+// according to the given regex rule. It prepares the string, matches the regex rule, and then finds
+// the corresponding tag sequence.
 func (r *RelationExtractorRB) extractFromRegexRules(allTabletLines string, regexRule string) []string {
 	//temporarily filter out mu-kux(DU) to remove inner parathesis
 	firstPass := strings.ReplaceAll(allTabletLines, "mu-kux(DU)", "mu-kux-DU")
@@ -104,6 +117,8 @@ func (r *RelationExtractorRB) extractFromRegexRules(allTabletLines string, regex
 
 }
 
+// createTagList creates a list of tags from the given grapheme tags. If a tag contains a comma,
+// the inner tag is extracted and used.
 func (r *RelationExtractorRB) createTagList(graphemeWithTag []string) []string {
 	tagList := []string{}
 	for _, tag := range graphemeWithTag {
@@ -126,6 +141,9 @@ func (r *RelationExtractorRB) createTagList(graphemeWithTag []string) []string {
 */
 
 //PN ANIM DEL
+// findRegexMatchFromTagSequence finds the match for a given tag sequence in the tag list.
+// It iterates over the tag list, comparing each tag with the corresponding tag in the sequence.
+// Once a match is found, the corresponding grapheme is added to the final list.
 func (r *RelationExtractorRB) findRegexMatchFromTagSequence(desiredTagSequence []string, tagList []string, graphemeWithTag []string) []string {
 	tupleList := []string{}
 	finalList := []string{}

@@ -9,6 +9,7 @@ import (
 	"sync"
 )
 
+// TaggedTransliterations is a type that holds tagged transliteration data for a tablet.
 type TaggedTransliterations struct {
 	TabletNum      string
 	taggedTranslit string //the entire tablets content
@@ -16,6 +17,8 @@ type TaggedTransliterations struct {
 	Period         string
 	DateReferenced string
 }
+
+// CDLIParser is a type that parses TSV data and outputs the parsed data in TaggedTransliterations format.
 type CDLIParser struct {
 	path               string
 	data               []TSVData
@@ -24,6 +27,7 @@ type CDLIParser struct {
 	done               chan struct{}
 }
 
+// TSVData represents one row of data from the TSV file, with each column represented as a field in the struct.
 type TSVData struct {
 	tabletNum           string
 	PUB                 string
@@ -38,6 +42,7 @@ type TSVData struct {
 	transli_entites     string
 }
 
+// NewCDLIParser constructs a new CDLIParser. The parser immediately starts reading and parsing the data at the given path.
 func NewCDLIParser(path string) *CDLIParser {
 	cdliParser := &CDLIParser{
 		path: path,
@@ -49,6 +54,7 @@ func NewCDLIParser(path string) *CDLIParser {
 	return cdliParser
 }
 
+// run manages the main parsing loop for the parser. It reads rows from the data slice, parses the data, and sends the parsed data to the output channel.
 func (p *CDLIParser) run() {
 	var wg sync.WaitGroup
 	wg.Add(1)
@@ -69,10 +75,13 @@ func (p *CDLIParser) run() {
 	wg.Wait()
 }
 
+// WaitUntilDone allows external callers to wait until the parser has finished processing all of its data.
 func (p *CDLIParser) WaitUntilDone() {
 	p.done <- struct{}{}
 }
 
+// collapseTabletTranslit concatenates the transliterations of tablets that share a tablet number.
+// It outputs a TaggedTransliterations value for each distinct tablet number.
 func (p *CDLIParser) collapseTabletTranslit(tablet TSVData, prevTabletNum string) {
 	if prevTabletNum != tablet.tabletNum {
 		taggedTranslit := &TaggedTransliterations{TabletNum: prevTabletNum, taggedTranslit: p.currTabletTranslit, Providence: tablet.Providence, Period: tablet.Period, DateReferenced: tablet.DatesReferenced}
@@ -83,6 +92,7 @@ func (p *CDLIParser) collapseTabletTranslit(tablet TSVData, prevTabletNum string
 	}
 }
 
+// readCDLIData reads TSV data from the file at the path specified in the CDLIParser.
 func (p *CDLIParser) readCDLIData() {
 	csvFile, err := os.Open(p.path)
 	if err != nil {
